@@ -1,0 +1,173 @@
+@charset 'utf-8';
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 12px;
+    font-family: Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.inlineblock{
+    display: inline-block;
+}
+#top{
+    min-width: 1100px;
+}
+#top>div{
+    width: calc(100%);
+}
+    #uppertop{
+        border-bottom: solid 1px silver;
+    }
+        #uppertopdetail{
+            width: 1080px;
+            height: 130px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #uppertopright{
+            position: absolute;
+            width: 239.69px;
+            top: 11px;
+            right: -5px;
+        }
+            .startpage{
+                line-height: 21px;
+                font-size: 11px;
+                color: gray;
+                float: left;
+            }
+            .juniornaver{
+                width: 68px;
+                padding: 5px;
+                float: left;
+            }
+            .juniornaverinner{
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+                background-position: 0 -120px;
+                height: 11px;
+                width: 58px;
+            }
+            .happybean{
+                width: 44px;
+                padding: 5px;
+            }
+            .happybeaninner{
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+                background-position: -143px  52px;
+                height: 11px;
+                width: 34px;
+            }
+            #uppertopright>a{
+                text-decoration: none;
+            }
+            #uppertopright>a:hover{
+                text-decoration: underline;
+            }
+            .toprightpad{
+                padding: 5px;
+            }
+
+    #lowertop{
+        border-bottom: solid 1px silver;
+    }
+        #lowertopdetail{
+            width: 1080px;
+            height: 47px;
+            margin: 0 auto;
+        }
+#outerbody{
+    min-width: 1100px;
+    background-color: rgb(230, 231, 230);
+}
+#innerbody>div{
+        height: calc(100%);
+}
+#innerbody{
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0px;
+}
+    #leftinner>div,
+    #rightinner>div{
+        width: calc(100%);
+        margin-bottom: 8px;
+        border: solid 1px silver;
+    }
+    #leftinner>div#leftinnertop{
+        border: solid 1px burlywood;
+    }
+    #leftinner{
+        width: 740px;
+    }
+        #leftinnertop{
+            height: 120px;
+        }
+        #leftinnermiddle{
+            height: 46px;
+        }
+        #leftinnerbottom{
+            height: 246px;
+        }
+    #rightinner{
+        width: 330px;
+        float: right;
+    }
+        #rightinnertop{
+            background-color: white;
+            height: 120px;
+            position: relative;
+            /* loginleft를 absolute로 만들기 위해 부모나 조상 중 하나가 반드시 relative여야 한다 */
+            /* 어느쪽이건 relative가 된 쪽을 기준으로 계산하게 된다 */
+        }
+        #rightinnertop *{
+            color: gray;
+            text-decoration: none;
+        }
+            #login{
+                width: 330px;
+                height: 93px;
+                padding: 15px 25px;
+            }
+            #login>p{
+                line-height: 14px;
+            }
+                .loginimg{
+                    display: block;
+                    height: 37px;
+                    margin-top: 12px;
+                    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_login_v180727.png');
+                    background-position: 0 -47px;
+                }
+                .loginbottom {
+                    width: 280px;
+                    height: 38px;
+                    position: absolute;
+                    /* loginleft를 absolute로 만들기 위해 부모나 조상 중 하나가 반드시 relative여야 한다 */
+                    font-size: 0px;
+                    /* 가운데 점(·)이 서로 붙게 만들기 위해서 해당 블럭의 폰트를 전부 0으로 만들어 준다 */
+                    /* 지금은 전역 폰트가 12로 되어있어서 상관없지만, 전역을 0으로 이미 만들었을 경우 가운데 점(·)를 싸고 있는 */
+                    /* span태그를 따로 폰트 사이즈를 지정해준다 */
+                    line-height: 38px;
+                    left: 25px;
+                    bottom: 0px;
+                }
+                #rightinnertop .loginbottom>a:hover{
+                    /* 위에서 rightinnertop의 자손태그 전부에 text-decoratiob을 없엤기 떄문에 그 냥 할경우 동작하지 않는다 */
+                    /* 때문에 조상을 강하게 불러서 우선권을 올려서 부여해줫다 */
+                    text-decoration: underline;
+                }
+                .rightfloating{
+                    float: right;
+                }
+        #rightinnermiddle{
+            height: 142px;
+        }
+        #rightinner>#rightinnerbottom{
+            border: 0px;
+            height: 150px;
+        }
