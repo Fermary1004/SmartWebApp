@@ -1,0 +1,52 @@
+@charset 'utf-8';
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    /* 박스를 만들때는 위에 3개를 꼭 넣어주는 버릇을 들이자 */
+
+    font-size: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#outerbox {
+    border: solid 2px #333333;
+    width: 100%;
+}
+
+.middlebox{
+    height: 200px;
+    width: calc(50%);
+    display: inline-block;
+}
+
+#middleboxleft{
+    border: solid 2px #CC6666;
+}
+
+#middleboxright{
+    border: solid 2px #6666CC;
+    float: right;
+}
+
+
+#outerbox2 {
+    border: solid 2px #333333;
+    width: 100%;
+    height: 204px;
+}
+#outerbox2>div{
+    border: solid 2px #999933;
+    width: calc(100% / 3);
+    height: 200px;
+    position: absolute;
+    display: inline-block;
+}
+#tripleboxmiddle{
+    left : calc(100% / 3 + 1px);
+}
+#tripleboxright{
+    right: 0px;
+}

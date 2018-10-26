@@ -1,0 +1,28 @@
+@charset 'utf-8';
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+
+    margin: 0px;
+    padding: 0px;
+}
+body>div{
+    border: solid 2px #000000;
+}
+
+.unscroll{
+    background-color: #6666cc;
+    height: 100px;
+    position: fixed;
+    top: 0px;
+    left: 50px;
+    right: 0px;
+    z-index: 100;
+}
+
+.scroll{
+    background-color: #CC6666;
+    height: 2000px;
+}

@@ -1,0 +1,50 @@
+@charset 'utf-8';
+
+*{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: solid 2px black;
+
+    font-size: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+#outerbox{
+    border-color: gray;
+    height: 500px;
+}
+#outerbox div{
+    display: inline-block;
+    height: calc(100%); 
+}
+
+#middleleft{
+    border-color: red;
+    width: calc((100% / 3) * 2);
+}
+#middleright{
+    border-color: blue;
+    width: calc(100% / 3);
+}
+#innerleft{
+    border-color: yellow;
+    width: calc(50%);
+}
+#innerright{
+    border-color: green;
+    width: calc(50%);
+}
+.left,
+.middle,
+.right{
+    height: calc(100%);
+    font-size: 14px;
+    float: left;
+    /* 최종적으로 float를 주지 않으면 안에 데이터가 들어갈때 밀려나간다. 그러므로 계산적으로 크기가 맞더라도 최종적으로는 float를 줘야한다 */
+}
+.middle{
+    border-color: orchid;
+    width: 100%;
+}
