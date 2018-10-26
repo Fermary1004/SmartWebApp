@@ -1,0 +1,54 @@
+@charset 'utf-8';
+/* 인코딩을 utf-8로 하겠다는 의미 */
+/*
+셀렉터
+1. 태그 셀렉터 - 태그 이름을 그대로 사용한다
+2. ID 셀렉터 - ID의 앞에 #을 붙혀서 사용한다
+3. Class 셀렉터 - 클래스의 앞에 .을 붙혀서 사용한다
+4. 가상 Class 셀렉터 - 동작과 관련하여 미리 정의된 가상 클래스가 있다. 혼자 쓰이지 않고 다른 셀렉터의 뒤에 :으로 연결하여 사용한다
+5. 전체 셀렉터 - 셀렉터 이름을 "*"으로 사용한다
+*/
+div, p{
+    height: 100px;
+    background-color: rgb(0, 101, 195);
+    color: #00C33C;
+    /* 마지막 ;는 필요없지만 넣어주는 버릇을 들이자 */
+}
+#heeello{
+    font-weight: 700;
+    background-color: goldenrod;
+    /* 따로 설정하지 않았다면 위의 태그 셀렉터와 충돌하지만 ID셀렉터가 우선하므로 배경색이 연주황색이 된다 */
+}
+.font-red{
+    color: red;
+}
+.font-red:hover{
+    text-decoration: underline;
+    cursor: move;
+}
+*{
+    font-size: 20px;
+    box-sizing: border-box;
+    /* 박스를 설정할때 테두리를 포함한 길이를 기준으로 하겠다는 의미 (크기 계산을 용의하게 하기 위함) */
+    -webkit-box-sizing: border-box;
+    /* 크롬으로 최적화를 하겠다 (기본은 익스플로러) */
+    -moz-box-sizing: border-box;
+    /* 파이어폭스에 최적화를 하겠다 */
+}
+div b{
+    /* div태그 안의 자손 b태그는 모두 아래를 적용하겠다는 의미 */
+    color:purple;
+}
+div>b{
+    /* div태그 안에 자식으로 b태그가 있다면 그 b태그에 아래를 적용하겠다는 의미 */
+    color:blue;
+}
+div.bold{
+    /* 두 조건을 붙혀쓴 경우 두 조건 모두를 포함 할 경우에만 적용하는 경우, 띄우면 모든 경우에 적용하는 경우 */
+    color:black;
+}
+div.bold.font-yellow{
+    /* 조건 3개를 모두 만족하는 경우에만 적용 */
+    color:yellow;
+    font-size: 20px;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <!--
+        method속성값은 get과 post가 있는데
+        get은 url의 뒤에 전송할 데이터를 넣어 서버에 전송하는 방식
+        post는 url이 아닌 header에 데이터를 넣어 서버에 전송하는 방식
+        일반적으로 회원가입이나 로그인과 같이 정보를 보호해야할 경우에는 post방식을 이용
+    -->
+    <h1>회원가입</h1>
+    <form>
+        <!-- 일반적으로 input태그는 form태그 안에 넣는데, 이유는 input태그의 목적은 정보를 입력하기 위함이고
+             그러므로 이를 처리하기 위해 서버에 정보를 전송하는 form와 같이 사용되는 경우가 대부분이다
+             그러므로 button태그나 input태그의 button도 같이 딸려나오는 경우가 많다 -->
+        <input type="text" placeholder="여기에 아이디를 입력하세요"><br>
+        <input type="password" placeholder="여기에 비밀번호를 입력하세요"><br>
+        <input type="email" placeholder="여기에 이메일 주소를 입력하세요"><br>
+        <!-- email처럼 입력받은 문자열이 원하는 조건을 만족하는지 확인하는 작업을 유효성 검사라고 한다 -->
+        <input type="radio" name="gender" value="male" checked> 남성
+        <input type="radio" name="gender" value="female"> 여성
+        <input type="radio" name="gender" value="vi"> 자웅동체<br>
+        <input type="checkbox">무슨 말인지 모르겠지만 약관에 동의하나요?<br>
+        <input type="checkbox">이것도 동의하나요?<br>
+        <!-- 체크박스는 중복을 허용할 경우, 라디오는 중족을 허용하지 않을 경우에 많이 쓰지만
+             설정없이 두면 둘다 중복이 가능하므로, 속성중에 name을 다른 라디오와 연동/설정을 해줘야한다 -->
+        <!-- 또한 체크박스는 선택/선택해제가 가능하지만, 라디오는 선택은 가능하지만 선택해제가 불가능하다 -->
+        <input type="button" value="이걸 눌러도 됩니다">
+        <button type="submit">그리고 이걸 눌러도 됩니다</button>
+    </form>
+    <form action="">
+        <input type="color"><br>
+        <input type="number"><br><br>
+        보너스 수치를 입력하세요
+        <select>
+            <option value="0">보너스</option>
+            <option value="+1">+1점</option>
+            <option value="+2">+2점</option>
+            <option value="+4">+4점</option>
+            <option value="+8">+8점</option>
+            <option value="+16">+16점</option>
+        </select><br><br>
+        <input type="file"><br>
+        <!-- 첨부파일과 같이 내 pc에 있는 파일을 선택/전송하게 하고 싶을때 사용 -->
+        <input type="month"><br>
+        <textarea cols="30" rows="10" placeholder="아무말이나 쳐봐요"></textarea>
+    </form>
+</body>
+</html>
