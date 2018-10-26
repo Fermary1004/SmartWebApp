@@ -1,0 +1,18 @@
+@charset 'utf-8';
+
+.line{
+    border: solid 4px #000000;
+}
+#box1{
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#box1-inner{
+    border-color: #FF0000;
+    height: 100px;
+}
+#box2-inner{
+    border-color: #0000FF;
+    height: 100px;
+    margin: 10px;
+}

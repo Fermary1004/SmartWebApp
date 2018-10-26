@@ -1,0 +1,51 @@
+@charset 'utf-8';
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    /* 크기가 0일때는 단위를 안적어도 된다 */
+    /* 
+        순열은 보통 큰놈을 먼저 적어서 위에 넣고, 작은 놈들을 덮어쓰게 한다
+        css작업을 할때 코스 순서를 조상, 자손순으로 작업을 하는 것이 좋다라는 이야기
+    */
+}
+/* body{
+    margin: 0px;
+    body에 마진을 넣어서 조절해줄 수 있다. 그러나 보통은 그냥 전체에 마진 0을 걸고 각 창마다 마진을 보정해주는 경우가 많다}
+     */
+#box1{
+    height: 150px;
+    background-color: #6666FF;
+    font-size: 0px;
+    /* 폰트 사이즈를 0으로 만들어서 html에서 해당 박스내의 엔터를 크기를 없에준다
+       엔터는 html에서 공백으로 변환된다
+       이 때문에 크기가 틀어지는걸 방지 */
+}
+#box1>*{
+    font-size: 40px;
+    /* 위에서 크기 정렬때문에 폰트를 0으로 만들어 버렸기 때문에, 다시 자식 박스들의 폰트 크기를 설정해서 폰트가 나오게 해준다 */
+}
+#boxleft,
+#boxleft1,
+#boxright1{
+    border: solid 2px #FF6666;
+    height: 100px;
+    width: calc(100% / 2);
+    display: inline-block;
+}
+#boxright{
+    border: solid 2px #FFFF66;
+    height: 100px;
+    width: calc(100% / 2);
+    /* calc합수는 연산자를 공백으로 구분하기 때문에 값과 연산자 사이에는 항상 공백을 입력해야한다
+    단 단위는 수치랑 붙여 써야한다 */
+    display: inline-block;
+}
+#boxright1{
+    float: right;
+    /* 한쪽으로 박스를 붙혀주는 것 */
+}

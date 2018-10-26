@@ -1,0 +1,51 @@
+@charset 'utf-8';
+div{
+    text-decoration: overline;
+    text-align: left;
+    text-indent: 100px;
+    /* 단위를 꼭 적어주자, 기본 단위가 각각 다를 수 있다 */
+    font-weight: bold;
+    font-style: italic;
+    font-family: 'Times New Roman', Times, serif;
+    /* 
+        폰트 이름에 띄우기가 있으면 ''로 묶어준다. 물론 왠간해서는 폰트명에는 ''를 넣어준다. 단 폰트 그룹일때는 ''를 넣지 않는다
+        한글 폰트는 영문명을 적어준다    
+    */
+    font-size: 30px;
+    /* 
+        font프로퍼티에 위의 4개를 묶어줄 수 있다
+        style weight size 
+     */
+    
+    
+    /* 아래는 margin태그이다 */
+    margin: 10px 20px 30px 40px;
+    /* margin은 위를 기준으로 시계방향으로 4개의 숫자를 써서 4개를 한번에 묶을 수 있다
+       위의 예시는 
+       margin-top: 10px;
+       margin-right: 20px;
+       margin-bottom: 30px;
+       margin-left: 40px;
+       이라고 쓴것과 동일해진다 */
+    /* 또한 숫자를 3개를 써서 묶을 수도 있는데, 이 경우 맨 앞의 숫자는 위, 두 번째는 좌/우, 세 번째는 아래가 된다 */
+    /* 또한 숫자를 2개를 써서 묶을 수도 있는데, 이 경우 앞의 숫자는 위/아래, 뒤의 숫자는 좌/우가 된다 */
+    /* 또한 1개를 쓸 경우 전 margin을 같은 값으로 하게 된다 */
+    margin: 10px 20px 30px;
+    /* margin이 두개 쓰였다. 이 경우 맨 아래 것만 적용된다 */
+
+    border-top-style: solid;
+    border-top-width: 10px;
+    border-top-color: #AAAA33;
+    /* margin과 마찬가지로 묶을 수 있다 */
+    border-style: solid;
+    border-width: 10px;
+    border-color: #AAAA33;
+    /* 전체를 묶을 수도 있다 */
+    border: solid 5px #FF3333;
+    border-bottom-color: #3333FF;
+    /* 위의 경우 맨 뒤에 두개만 적용되어서 전체 테두리가 솔리드 5픽셀, 빨간색이 되지만, 아랫줄만 파란색이 된다 */
+
+    border-radius: 10px;
+
+    padding: 10px 15px;
+}

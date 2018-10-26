@@ -1,0 +1,51 @@
+@charset 'utf-8';
+
+/* box 클래스 */
+.box{
+    background-color: #8888FF;
+    /* color를 먼저 넣는 이유는 이미지 아래에 넣을 경우, 이미지를 넣고 칼라를 뿌리면서 이미지가 덮혀버릴 수 있기 때문이다 */
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0xfc50bF_j9stvO51vSOEDIEVtj7hx5KWQQdLdLwLvgc2HshMag");
+    background-position: center center;
+    /* 
+       background-position-x: bottom <- x축을 기준으로 따지는 것. 즉 위 아래로 나누는 것 (이 경우 아래를 기준으로 삼겠다는 뜻)
+       background-position-y: left <- y축을 기준으로 따지는 것. 즉 좌 우로 마누는 것 (이 경우 왼쪽을 기준으로 삼겠다는 뜻)
+       를 친 효과를 묶어준 효과(단 세부 사항은 임의로 변경했다)
+     */
+    background-repeat: no-repeat;
+    height: 400px;
+    /* backgroud도 backgroud: 로 묶을 수 있지만, backgroud는 왠간해서는 나누는게 좋다 */
+    }
+div{
+    font: normal 24px verdata;
+    cursor: default;
+}
+.dropText{
+    text-shadow: 3px 3px;}
+    /* 앞이 수평, 뒤가 수평 위치를 지정 */
+.redText{
+    text-shadow: 3px 3px red;}
+    /* 투영된 문자의 색을 지정 */
+.blurText{
+    text-shadow: 3px 3px 5px skyblue;}
+    /* 3번째 숫자는 투영된 문자의 번짐 정도를 지정 */
+.glowEffect{
+    text-shadow: 0px 0px 3px red;}
+    /* 투영된 문자가 번지고 위치가 겹치게 해서 문자가 빛나는 것 처럼 보이게 만든다 */
+.wordArtEffect{
+    color: white;
+    text-shadow: 0px 0px 3px darkblue;}
+    /* 사실상 글로우랑 똑같다 */
+.threeDEffect{
+    color: white;
+    text-shadow: 2px 2px 4px black;}
+    /* 그림자처럼 보이게 해서 3D처럼 보이게 한 것, 위에 3개는 사실상 별 차이가 없다 */
+.multiEffect{
+    color: yellow;
+    text-shadow: 2px 2px 2px black,
+                0 0 25px blue, 0 0 5px darkblue;}
+    /* 
+       여러가지 효과를 같이 줄 수 있다. 검은 그림자를 살짝 번지게 넣고,
+       밝은 파랑색으로 빛나는 것처럼 보이게 효과,
+       어두운 파랑으로 빛나는 것 처럼 보이는 효과
+       를 한번에 준 것
+    */
