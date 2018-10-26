@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="EX7.css">
+    <title>Tabla in the table into table</title>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>번호</th>
+                <th>이름</th>
+                <th>과목</th>
+                <th>성적</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>댕댕이</td>
+                <td rowspan="4">CSS</td>
+                <td>49점</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>잠탱이</td>
+                <!-- 여기에 들어갈 내용은 지워져서 합쳐졌습니다 (댕댕이 자리의 rowspan을 이용해서 합침) -->
+                <td>70점</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>발발이</td>
+                <!-- 여기에 들어갈 내용은 지워져서 합쳐졌습니다 (댕댕이 자리의 rowspan을 이용해서 합침) -->
+                <td>37점</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>투덜이</td>
+                <!-- 여기에 들어갈 내용은 지워져서 합쳐졌습니다 (댕댕이 자리의 rowspan을 이용해서 합침) -->
+                <td>44점</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <th>합계</th>
+                <td colspan="3">200점</td>
+                <!-- 다음에 필요한 두칸은 지워졌습니다. (합계란의 colspan을 이용해서 합침) -->
+            </tr>
+        </tfoot>
+    </table>
+</body>
+</html>

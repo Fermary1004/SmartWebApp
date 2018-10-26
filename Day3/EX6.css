@@ -1,0 +1,14 @@
+@charset 'utf-8';
+
+.box{
+    height: 50px;
+    border: solid 1px #000000;
+    overflow: auto;
+    /*
+    기본적으로 overflow는 visible로 되어있다
+    visible : 컨텐츠 내용이 넘어가도 넘어간 내용을 보여준다
+    hidden : 컨텐츠 내용이 넘어가면 넘어간 내용을 감춰준다
+    scroll : 넘어간 내용을 스크롤로 볼 수 있개 해주는 데, 만약 내용이 그냥 한화면에 보이더라도 스크롤이 생긴다
+    auto : 컨텐츠 내용이 안넘어간 경우 자동으로 hidden으로, 넘어간 경우 scroll로 자동으로 바꿔준다
+    */
+}

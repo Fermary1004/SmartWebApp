@@ -1,0 +1,54 @@
+@charset 'utf-8';
+
+input{
+    width: 300px;
+    height: 50px;
+    font-size: 20px;
+    text-align: center;
+}
+input:focus{
+    font-weight: bold;
+}
+input[type=text]{
+    color: #FF0000;
+}
+input[type=password]{
+    color: #0000FF;
+}
+input::placeholder{
+    color: goldenrod;
+}
+input[readonly]{
+    background-color: #666666;
+}
+
+/* @keyframes : 애니메이션을 등록 */
+
+@keyframes textColorAnimation{
+    /*  0% {color : blue} <--- 시작 시를 의미. 0%대신 from사용가능. 전체 시간을 기준으로 0%
+        
+        30% {color : green}
+     
+        애니메이션 동작 시간이 전체를 기준으로 볼때 30%경과시에 녹색이 되게 만든다
+        색은 서서히 바뀌며, 그러므로 이와 같은 경우 0~30%내에는 파란색에서 녹색으로 진행되고
+        30%시점에 정확히 녹색이 되게 만든다
+        이후 100%에 빨간색이 되도록 서서히(이 경우 시간이 넉넉하므로 천천히 변하게 된다) 변화한다
+        그러므로 아래에는 자연스럽게 변하게 만들었다
+    
+        100% {color : red} <---- 끝까지. 100%대신 to 사용가능 */
+
+    0% {color : blue}
+    33% {color : green}
+    66% {color : red}
+    100% {color : blue}   /* 무한 반복을 시킬때는 요렇게 마지막에 100%일때 처음과 같게 만들어서 자연스럽게 만들 수 있다 */
+}
+
+span {
+    font-size: 50px;
+    /* 사용할 애니메이션 이름 */
+    animation-name: textColorAnimation;
+    /* 애니메이션 1회마다 6초간 재생 */
+    animation-duration: 6s;
+    /* 무한 반복 */
+    animation-iteration-count: infinite;
+}

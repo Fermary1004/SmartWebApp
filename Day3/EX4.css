@@ -1,0 +1,29 @@
+@charset 'utf-8';
+
+.box{
+    width: 300px;
+    height: 300px;
+    font-size: 275px;
+    color: #FFFFFF;
+    display: inline-block;
+    position: absolute;
+    text-align: right;
+}
+#first{  /* 같은 방식으로 .box:nth-child(1)이라고 해줄 수도 있다. 이 경우 box클래스의 자식 중에 첫 번째를 말한다 */
+    background-color: #FFCC00;
+    left: 0px;
+    top: 0px;
+    z-index: 3;
+}
+#second{
+    background-color: #CC66FF;
+    left: 100px;
+    top: 100px;
+    z-index: 2;
+}
+#third{
+    background-color: #6666FF;
+    left: 200px;
+    top: 200px;
+    z-index: 1;
+}

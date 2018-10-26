@@ -1,0 +1,31 @@
+@charset 'utf-8';
+
+.container{
+    padding: 30px;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    font-size: 30px;
+    color: #FFFFFF;
+    background-color: #990000;
+    display: inline-block;
+    text-align: center;
+    /* box-sinzing을 안하면 padding의 크기에 height의 크기가 더해진 박스가 생성됨, 따라서 높이가 120px이 되기 때문에 이를 막기 위해 box-sizing을 이용 */
+    box-sizing: border-box;
+    padding-top: 20px;
+}
+#h,
+#k{
+    position: relative;
+}
+#h:hover{
+    top: 20px;
+    left: 20px;
+    background-color: #000099;
+}
+#k:hover{
+    bottom: 20px;
+    right: 20px;
+    background-color: #009900;
+}
