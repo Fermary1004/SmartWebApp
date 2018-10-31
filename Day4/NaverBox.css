@@ -18,7 +18,7 @@
     width: calc(100%);
 }
     #uppertop{
-        border-bottom: solid 1px silver;
+        border-bottom: solid 1px #DCDCDC;
     }
         #uppertopdetail{
             width: 1080px;
@@ -28,58 +28,306 @@
         }
         #uppertopright{
             position: absolute;
-            width: 239.69px;
+            width: 255px;
             top: 11px;
             right: -5px;
         }
-            .startpage{
+            #startpage{
                 line-height: 21px;
                 font-size: 11px;
-                color: gray;
+                color: #808080;
                 float: left;
+                text-decoration: none;
             }
-            .juniornaver{
+            #startmark{
+                display: inline-block;
+                margin-left: 5px;
+                width: 6px;
+                height: 7px;
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+                background-position: -158px -94px;
+            }
+            .startblank{
+                width: 1px;
+                height: 11px;
+                background: #CACCD1;
+                float: left;
+                margin: 5px 4px 0 9px;
+            }
+            #juniornaver{
                 width: 68px;
-                padding: 5px;
+                height: 21px;
                 float: left;
+                padding: 5px;
+                text-decoration: none;
             }
-            .juniornaverinner{
+            #juniornaverinner{
                 background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
                 background-position: 0 -120px;
                 height: 11px;
                 width: 58px;
+                display: block;
+                z-index: 10;
             }
-            .happybean{
+            #juniornaverinner:hover{
+                background-position: -68px  -120px;
+            }
+            #happybean{
+                height: 21px;
                 width: 44px;
                 padding: 5px;
-            }
-            .happybeaninner{
-                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
-                background-position: -143px  52px;
-                height: 11px;
-                width: 34px;
-            }
-            #uppertopright>a{
+                float: left;
                 text-decoration: none;
             }
-            #uppertopright>a:hover{
+            #happybeaninner{
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+                background-position: -143px  -52px;
+                height: 11px;
+                width: 34px;
+                display: block;
+                z-index: 10;
+            }
+            #happybeaninner:hover{
+                background-position: -143px  -73px;
+            }
+            #uppertopright>#startpage:hover{
                 text-decoration: underline;
             }
-            .toprightpad{
-                padding: 5px;
+        #naverlogo{
+            position: absolute;
+            top: 50%;
+            left: -2px;
+            margin-top: -25px;
+        }
+            #naverlogodetail{
+                display: block;
+                width: 198px;
+                height: 48px;
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+                background-position: -4px -4px;
             }
-
+        .searchbox{
+            position: absolute;
+            left: 219px;
+            top: 50%;
+            margin-top: -20px;
+        }
+            .searchboxinput{
+                border: solid 2px #03CF5D;
+                display: inline-block;
+                width: 474px;
+                height: 49px;
+            }
+            .keyboard{
+                width: 31px;
+                height: 41px;
+                position: absolute;
+                top: 50%;
+                right: 76px;
+                margin-top: -22px;
+                padding: 15px 6px;
+                cursor: pointer;
+            }
+                .keyboardicon{
+                    display: block;
+                    width: 19px;
+                    height: 11px;
+                    background-position: -33px -60px;
+                    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+                }
+            .autocomplete{
+                width: 27px;
+                height: 42px;
+                position: absolute;
+                right: 49px;
+                top: 50%;
+                margin-top: -22px;
+                padding: 19px 12px 19px 6px;
+                cursor: pointer;
+            }
+                .autocompleteicon{
+                    display: block;
+                    width: 9px;
+                    height: 4px;
+                    background-position: -87px -60px;
+                    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+                }
+            .searchboxbutton{
+                background-color: #03CF5D;
+                width: 49px;
+                height: 49px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                border: 0px;
+            }
+                .searchicon{
+                    width: 21px;
+                    height: 21px;
+                    position: absolute;
+                    top: 14px;
+                    left: 14px;
+                    background-position: -4px -60px;
+                    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+                }
     #lowertop{
-        border-bottom: solid 1px silver;
+        border-bottom: solid 1px #C0C0C0;
+        height: 47px;
     }
         #lowertopdetail{
             width: 1080px;
-            height: 47px;
+            height: 32px;
             margin: 0 auto;
+            position: relative;
+            display: table;
+            /* 테이블로 만들어서 우측으로 배열되게 한다, 하위 애들을 block으로 만들기 위함 */
+            table-layout: fixed;
+            clear: both;
+            content: "";
+        }
+        #menugreen{
+            width: 303px;
+            height: 32px;
+            padding-left: 4px;
+        }
+        #menublack{
+            width: 366px;
+            height: 32px;
+            padding-left: 14px;
+        }
+        .menu{
+            position: relative;
+            float: left;
+            padding-top: 16px;
+            list-style: none;
+        }
+            .list{
+                float: left;
+                padding-left: 14px;
+                display: list-item;
+                /* 리스트를 우측으로 밀어주는 것 */
+            }
+            .list>a{
+                height: 16px;
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png');
+                display: block;
+            }
+            #listfirst{
+                padding-left: 0px;
+            }
+                .mail{
+                    width: 25px;
+                    background-position: -244px -233px;
+                }
+                .cafe{
+                    width: 27px;
+                    background-position: -279px -130px;
+                }
+                .blog{
+                    width: 40px;
+                    background-position: -150px -182px;
+                }
+                .kin{
+                    width: 40px;
+                    background-position: -102px -156px;
+                }
+                .shopping{
+                    width: 26px;
+                    background-position: -128px -104px;
+                }
+                .pay{
+                    width: 25px;
+                    background-position: -107px -285px;
+                }
+                .tv{
+                    margin-top: -1px;
+                    width: 32px;
+                    background-position: -125px -130px;
+                }
+                .dic{
+                    width: 26px;
+                    background-position: 0 -259px;
+                }
+                .news{
+                    width: 28px;
+                    background-position: -279px -26px;
+                }
+                .stock{
+                    width: 26px;
+                    background-position: -108px -259px;
+                }
+                .land{
+                    width: 40px;
+                    background-position: -152px -156px;
+                }
+                .map{
+                    width: 27px;
+                    background-position: -279px -208px;
+                }
+                .movie{
+                    width: 27px;
+                    background-position: -279px -52px;
+                }
+                .music{
+                    width: 26px;
+                    background-position: -144px -259px;
+                }
+                .book{
+                    width: 13px;
+                    background-position: -140px -78px;
+                }
+                .webtoon{
+                    width: 27px;
+                    background-position: -279px -78px;
+                }
+        .menubar{
+            width: 1px;
+            height: 14px;
+            background: #DCDCDC;
+            float: left;
+            margin: 18px 16px 0px;
+        }
+        .seemore{
+            margin-top: 16px;
+            width: 55px;
+            height: 16px;
+            background-image: url('https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png');
+            background-position: 0 -104px;
+            display: block;
+            position: relative;
+            float: left;
+        }
+        .menulast{
+            width: 198px;
+            height: 20px;
+            position: absolute;
+            right : 0px;
+            top: calc((100% + 15px) /2);
+            margin-top: -10px;
+            line-height: 20px;
+        }
+            .realnumber{
+                font-family: Arial, Sans-serif;
+                font-size: 16px;
+                color: #00AB33;
+                line-height: 20px;
+            }
+            .realsearch{
+                font-size: 14px;
+            }
+        .realsearcharrow{
+            width: 11px;
+            height: 6px;
+            background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+            background-position: -187px -73px;
+            position: absolute;
+            right: 0px;
+            top: calc((100% + 15px) /2);
+            margin-top: -3px;
         }
 #outerbody{
     min-width: 1100px;
-    background-color: rgb(230, 231, 230);
+    background-color: #DCDCDC;
 }
 #innerbody>div{
         height: calc(100%);
@@ -96,10 +344,10 @@
     #rightinner>div{
         width: calc(100%);
         margin-bottom: 8px;
-        border: solid 1px silver;
+        border: solid 1px #C0C0C0;
     }
     #leftinner>div#leftinnertop{
-        border: solid 1px burlywood;
+        border: solid 1px #DEB887;
     }
     #leftinner{
         width: 740px;
@@ -118,14 +366,14 @@
         float: right;
     }
         #rightinnertop{
-            background-color: white;
+            background-color: #FFFFFF;
             height: 120px;
             position: relative;
             /* loginleft를 absolute로 만들기 위해 부모나 조상 중 하나가 반드시 relative여야 한다 */
             /* 어느쪽이건 relative가 된 쪽을 기준으로 계산하게 된다 */
         }
         #rightinnertop *{
-            color: gray;
+            color: #808080;
             text-decoration: none;
         }
             #login{
@@ -167,6 +415,85 @@
         #rightinnermiddle{
             height: 142px;
         }
+        #rightinnermiddle>div{
+            background-color: #FFFFFF;
+        }
+            .timesquarehead{
+                position: relative;
+                padding-left: 15px;
+                height: 34px;
+                border-bottom: 1px solid #DCDCDC;
+            }
+            .timesquarehead>div{
+                display: inline-block;
+            }
+                .timesquareheadtitle{
+                    padding: 9px 0px 7px;
+                    max-width: 208px;
+                    width: 208px;
+                    letter-spacing: -1px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                    .hi_datecover{
+                        position: relative;
+                        color: #000000;
+                        top: 1px;
+                        text-decoration: none;
+                    }
+                        .hi_date{
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                        .hi_date:hover{
+                            text-decoration: underline;
+                        }
+                        .hi_day{
+                            vertical-align: top;
+                            margin-left: 3px;
+                            font-weight: bold;
+                            font-size: 13px;
+                            line-height: 16px;
+                        }
+                    .timesquarebar{
+                        display: inline-block;
+                        margin: 0 -1px 0 4px;
+                        vertical-align: -1px;
+                        color: #DCDCDC;
+                        font-style: normal;
+                        font-size: 15px;
+                        line-height: 16px;
+                    }
+                    .hi_tail{
+                        max-width: 130px;
+                        color: #888888;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        text-decoration: none;
+                    }
+                    .hi_tail:hover{
+                        text-decoration: underline;
+                    }
+                        .hi_tailicon{
+                            display: inline-block;
+                            margin: 4px 4px 0 7px;
+                            width: 5px;
+                            height: 9px;
+                            background-position: -433px -377px;
+                            background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png');
+                        }
+                .timesquareheadcount{
+                    position: absolute;
+                }
+                .timesquareheadpage{
+                    position: absolute;
+                }
+            .timesquare{
+                height: 106px;
+            }
         #rightinner>#rightinnerbottom{
             border: 0px;
             height: 150px;

@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
     <link rel="stylesheet" href="NaverBox.css">
     <title>NaverBox</title>
 </head>
@@ -11,20 +12,73 @@
     <div id="top">
         <div id="uppertop">
             <div id="uppertopdetail">
+                <!-- 우상단 메뉴 -->
                 <div id="uppertopright">
-                    <a href="#" class="startpage">네이버를 시작페이지로
-                    <span>></span></a>
-                    <a href="#" class="juniornaver">
-                        <span class="juniornaverinner"></span>
+                    <a href="#" id="startpage">네이버를 시작페이지로<span id="startmark"></span></a>
+                    <span class="startblank"></span>
+                    <a href="#" id="juniornaver">
+                        <span id="juniornaverinner"></span>
                     </a>
-                    <a href="#" class="happybean">
-                        <span class="happybeaninner"></span>
+                    <a href="#" id="happybean">
+                        <span id="happybeaninner"></span>
                     </a>
                 </div>
+                <!-- 우상단 메뉴 -->
+                <div id="naverlogo">
+                    <a href="https://naver.com" target="_blank"><span id="naverlogodetail"></span></a>
+                </div>
+                <!-- 검색창 -->
+                <div class="searchbox">
+                    <form action="#">
+                        <!-- 검색창 입력 -->
+                        <div class="searchboxinput"></div>
+                        <!-- 검색창 입력 -->
+                        <div class="keyboard">
+                            <span class="keyboardicon"></span>
+                        </div>
+                        <div class="autocomplete">
+                            <span class="autocompleteicon"></span>
+                        </div>
+                        <button class="searchboxbutton">
+                            <span class="searchicon"></span>
+                        </button>
+                    </form>
+                </div>
+                <!-- 검색창 -->
             </div>
         </div>
         <div id="lowertop">
-            <div id="lowertopdetail"></div>
+            <div id="lowertopdetail">
+                <ul class="menu" id="menugreen">
+                    <li class="list" id="listfirst"><a href="#" class="mail"></a></li>
+                    <li class="list"><a href="#" class="cafe"></a></li>
+                    <li class="list"><a href="#" class="blog"></a></li>
+                    <li class="list"><a href="#" class="kin"></a></li>
+                    <li class="list"><a href="#" class="shopping"></a></li>
+                    <li class="list"><a href="#" class="pay"></a></li>
+                    <li class="list"><a href="#" class="tv"></a></li>
+                </ul>
+                <ul class="menu" id="menublack">
+                    <li class="list" id="listfirst"><a href="#" class="dic"></a></li>
+                    <li class="list"><a href="#" class="news"></a></li>
+                    <li class="list"><a href="#" class="stock"></a></li>
+                    <li class="list"><a href="#" class="land"></a></li>
+                    <li class="list"><a href="#" class="map"></a></li>
+                    <li class="list"><a href="#" class="movie"></a></li>
+                    <li class="list"><a href="#" class="music"></a></li>
+                    <li class="list"><a href="#" class="book"></a></li>
+                    <li class="list"><a href="#" class="webtoon"></a></li>
+                </ul>
+                <div class="menubar"></div>
+                <a href="#" class="seemore"></a>
+                <!-- 실시간 검색 -->
+                <div class="menulast">
+                    <span class="realnumber">11</span>
+                    <span class="realsearch">그린컴퓨터아트학원</span>
+                </div>
+                <div class="realsearcharrow"></div>
+                <!-- 실시간 검색 -->
+            </div>
         </div>
     </div>
     <div id="outerbody">
@@ -40,6 +94,7 @@
             </div>
             <div class="inlineblock" id="rightinner">
                 <div id="rightinnertop">
+                    <!-- 로그인 창 -->
                     <div id="login">
                         <P>네이버를 더 안전하고 편리하게 이용하세요</P>
                         <a href="#" class="loginimg"></a>
@@ -50,8 +105,30 @@
                             <a href="#" class="rightfloating">회원가입</a>
                         </div>
                     </div>
+                    <!-- 로그인 창 -->
                 </div>
-                <div id="rightinnermiddle"></div>
+                <div id="rightinnermiddle">
+                    <!-- 타입 스퀘어 -->
+                    <div class="timesquarehead">
+                        <div class="timesquareheadtitle">
+                            <a href="#" class="hi_datecover">
+                                <span class="hi_date">10.31.</span>
+                                <span class="hi_day">(수)</span>
+                            </a>
+                            <i class="timesquarebar">|</i>
+                            <a href="#" class="hi_tail">
+                                <span>영어회화
+                                    <i class="hi_tailicon"></i>
+                                    <i class="fas fa-angle-right"></i>
+                                </span>
+                            </a>
+                        </div>
+                        <div class="timesquareheadcount">1/7</div>
+                        <div class="timesquareheadpage"></div>
+                    </div>
+                    <div class="timesquare"></div>
+                    <!-- 타임 스퀘어 -->
+                </div>
                 <div id="rightinnerbottom">
                     <a href="https://nv.veta.naver.com/fxclick?eu=EU10000119&calp=-&ac=7743386&src=3605991&br=2779522&evtcd=P901&x_ti=838&tb=&oid=&sid1=&sid2=&rk=e9355222291c3573a67fe06b55a5cb19&eltts=lMHn03mFYeqdw3UxE3qbeg%3D%3D&lu=&brs=Y&" target="_blank">
                         <img src="https://ssl.pstatic.net/tveta/libs/1214/1214885/b044720c73151f818db0_20181024092406040.jpg" width="330px" height="150px">
