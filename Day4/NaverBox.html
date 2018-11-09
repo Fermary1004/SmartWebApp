@@ -31,7 +31,7 @@
                 <div class="searchbox">
                     <form action="#">
                         <!-- 검색창 입력 -->
-                        <div class="searchboxinput"></div>
+                        <div class="searchboxinput"><input type="text" name="search"></div>
                         <!-- 검색창 입력 -->
                         <div class="keyboard">
                             <span class="keyboardicon"></span>
@@ -89,8 +89,104 @@
                         <img src="https://ssl.pstatic.net/tveta/libs/1210/1210607/72b814bd75320bace031_20181025110955978.jpg" width="738px" height="118px">
                     </a>
                 </div>
-                <div id="leftinnermiddle"></div>
-                <div id="leftinnerbottom"></div>
+                <div id="leftinnermiddle">
+                    <div id="newscast">
+                        <h3 id="newscastfront">
+                            <a href="#">연합뉴스<span class="newstitleicon"></span></a>
+                        </h3>
+                        <div id="newscastmiddle">
+                            <a href="#">검찰, 토막살인범 변경석에 무기징역 구형</a>
+                        </div>
+                    </div>
+                    <ul id="newscasttail">
+                        <li class="newscasttailli"><a href="#" class="tailnews">네이버뉴스</a></li>
+                        <li class="newscasttailli"><a href="#">연예</a></li>
+                        <li class="newscasttailli"><a href="#">스포츠</a></li>
+                        <li class="newscasttailli"><a href="#">경제</a></li>
+                    </ul>
+                </div>
+                <div id="leftinnerbottom">
+                    <!-- 뉴스스탠드 -->
+                    <div class="newslist">
+                        <h3 class="newsstand">
+                            <a href="#">뉴스스탠드<span class="newstitleicon"></span></a>
+                        </h3>
+                        <div class="newslistfront">
+                            <div class="newslistfrontsort">
+                                <a href="#" class="newslistfirst">전체 언론사</a>
+                                <span class="newslistfrontbar"></span>
+                                <a href="#">MY 뉴스</a>
+                            </div>
+                        </div>
+                        <div class="newslisttail">
+                            <div class="newslisttailsort">
+                                <a href="#"><i class="newslisttail1"></i></a>
+                                <a href="#"><i class="newslisttail2"></i></a>
+                                <a href="#"><i class="newslisttail3"></i></a>
+                            </div>
+                            <ul class="newstailarrow">
+                                <li class="newstailarrows">
+                                    <a href="#" class="newsarrowchange1"><i class="newsleftarrowicon"></i></a>
+                                </li>
+                                <li class="newstailarrows">
+                                    <a href="#" class="newsarrowchange2"><i class="newsrightarrowicon"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- 뉴스스탠드 -->
+                    <div class="panels">
+                        <ul class="api-list">
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd173559874.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd173223533.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2018/0913/nsd104554287.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd183553864.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/1201/nsd161818802.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd154314463.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd154619739.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2018/1016/nsd1687672.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd17324940.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd173138949.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd144543120.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2018/0312/nsd11361752.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd192546763.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/1209/nsd1413096.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd151840663.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd14479875.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd154426359.png"></a></li>
+                            <li><a href="#"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd17133978.png"></a></li>
+                        </ul>
+                        <!-- <div>
+                            <div class="toppanels">
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd173559874.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd173223533.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd183553864.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd151840663.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/1201/nsd161818802.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd154314463.png"></a>
+                            </div> -->
+                        <div class="panelbordertop"></div>
+                            <!-- <div class="middlepanels">
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd154619739.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2018/1016/nsd1687672.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd17324940.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd173138949.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd144543120.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2018/0312/nsd11361752.png"></a>
+                                </div> -->
+                        <div class="panelborderbottom"></div>
+                            <!-- <div class="bottompanels">
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd192546763.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/1209/nsd1413096.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2018/0913/nsd104554287.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd14479875.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd154426359.png"></a>
+                                <a href="#" class="panelsteps"><img src="https://s.pstatic.net/static/newsstand/up/2017/0424/nsd17133978.png"></a>
+                            </div> -->
+                        <div class="panelside"></div>
+                        <!-- </div> -->
+                    </div>
+                </div>
             </div>
             <div class="inlineblock" id="rightinner">
                 <div id="rightinnertop">
@@ -108,7 +204,7 @@
                     <!-- 로그인 창 -->
                 </div>
                 <div id="rightinnermiddle">
-                    <!-- 타입 스퀘어 -->
+                    <!-- 타임 스퀘어 -->
                     <div class="timesquarehead">
                         <div class="timesquareheadtitle">
                             <a href="#" class="hi_datecover">
@@ -119,14 +215,22 @@
                             <a href="#" class="hi_tail">
                                 <span>영어회화
                                     <i class="hi_tailicon"></i>
-                                    <i class="fas fa-angle-right"></i>
                                 </span>
                             </a>
                         </div>
-                        <div class="timesquareheadcount">1/7</div>
-                        <div class="timesquareheadpage"></div>
+                        <div class="timesquareheadcount"><b class="colorblack">5</b>/7</div>
+                        <div class="timesquareheadpage">
+                            <a href="#" class="timesquareleftarrow"><i id="timeleftarrow"></i></a>
+                            <a href="#" class="timesquarerightarrow"><i id="timerightarrow"></i></a>
+                        </div>
                     </div>
-                    <div class="timesquare"></div>
+                    <div class="timesquare">
+                            <div class="pleasesecret">
+                                <p class="pleasesecreth">비밀 지키세요.</p>
+                                <p class="pleasesecretv">Please keep it a secret.</p>
+                                <p class="pleasesecrets">플리즈 킵 잇 어 시크릿</p>
+                            </div>
+                    </div>
                     <!-- 타임 스퀘어 -->
                 </div>
                 <div id="rightinnerbottom">
