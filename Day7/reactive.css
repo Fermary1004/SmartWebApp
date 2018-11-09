@@ -1,0 +1,71 @@
+@charset 'utf=8';
+
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+.test{
+	border: solid 2px red;
+	background-color: goldenrod;
+}
+.container-fluid{
+	width: 100%;
+}
+.container{
+	margin: 0px auto;
+}
+.btn{
+	background-color: darkblue;
+	border: solid 1px white;
+	border-radius: 5px;
+	color: white;
+	height: 50px;
+	margin: 5px;
+}
+@media (max-width: 575px){
+	.container{
+		width: 100%;
+	}
+	.btn{
+		width: 50%;
+	}
+}
+@media (min-width: 576px) /*and (max-width: 767px) */{
+	/* 순서에 무관하게 적용되게 하고 싶다면 최대치도 넣어서 정확히 범위를 지정해주자 */
+	.container{
+		width: 540px;
+	}
+	.btn{
+		width: 510px;
+		height: 100px;
+	}
+}
+@media (min-width: 768px){
+	/* 큰 범위를 아래에 적용하여 중첩범위에서 아래가 적용되게 해준다 */
+	.container{
+		width: 720px;
+	}
+	.btn{
+		width: 680px;
+		height: 200px;
+	}
+}
+@media (min-width: 992px){
+	.container{
+		width: 960px;
+	}
+	.btn{
+		width: 910px;
+		height: 300px;
+	}
+}
+@media (min-width: 1200px){
+	.container{
+		width: 1140px;
+	}
+	.btn{
+		width: 1080px;
+		height: 400px;
+	}
+}
