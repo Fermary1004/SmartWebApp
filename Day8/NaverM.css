@@ -1,0 +1,94 @@
+@charset 'utf-8';
+
+*{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+.logo{
+	height: 100px;
+	background-color: green;
+}
+.menu{
+	height: 43px;
+	background-color: gray;
+}
+.main::after{
+	clear: both;
+	content: "";
+	display: block;
+}
+.main{
+	position: relative;
+}
+.main>div{
+	border: solid 1px black;
+	width: calc(100% / 3);
+	position: absolute;
+}
+.realsearch{
+	height: 258px;
+}
+.weather{
+	height: 70px;
+	top: 258px;
+}
+.advertisement{
+	height: 75px; /* 크기가 보정되는 상자 */
+	left: calc(100% / 3);
+}
+.newsmenu{
+	height: 86px;
+	top: 75px;
+	left: calc(100% / 3);
+}
+.middlenews{
+	height: 150px; /* 크기가 보정되는 상자 */
+	top: 161px;
+	left: calc(100% / 3);
+}
+.sidenews{
+	height: 150px; /* 크기가 보정되는 상자 */
+	left: calc(100% * (2 / 3));
+}
+.press{
+	height: 260px;
+	top: 150px;
+	left: calc(100% * (2 / 3));
+}
+@media (max-width: 1023px){
+	.main>div{
+		width: calc(100% / 2);
+	}
+	.weather{
+		left: calc(100% / 2);
+		top: 75px;
+	}
+	.advertisement{
+		left: calc(100% / 2);
+	}
+	.newsmenu{
+		top: 408px;
+		left: 0px;
+	}
+	.middlenews{
+		top: 405px;
+		left: calc(100% / 2);
+	}
+	.sidenews{
+		left: 0px;
+		top: 258px;
+	}
+	.press{
+		top: 145px;
+		left: calc(100% / 2);
+	}
+}
+@media (max-width: 633px){
+	.main>div{
+		width: calc(100%);
+		position: unset;
+	}
+}
