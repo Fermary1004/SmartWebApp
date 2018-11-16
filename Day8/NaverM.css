@@ -102,9 +102,163 @@
 					background-size: 655px 642px;
 				}
 	.menu{
+		width: 100%;
 		height: 43px;
 		background-color: #FFFFFF;
+		border-bottom: solid 1px #CCCCCC;
 		vertical-align: top;
+		position: relative;
+	}
+		.menuicons{
+			display: block;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+			height: 100%;
+			width: 100%;
+		}
+			.menuiconsinner{
+				display: table;
+				list-style: none;
+				width: 100%;
+				padding: 0px 53px 0px 12px;;
+				height: 42px;
+			}	
+				.menuiconslist{
+					display: table-cell;
+					height: 46px;
+					width: calc(100% / 5);
+					text-align: center;
+				}
+				.menuiconslist>a{
+					display: inline-block;
+					height: 41px;
+					line-height: 44px;
+					padding: 0px 5px;
+					text-decoration: none;
+				}
+				.menuiconslist>a:hover{
+					height: 43px;
+					border-bottom: solid 2px #16B634;
+				}
+				.menuiconslist>a:hover .menuiconslistnews{
+					background-position: -184px -539px;
+				}
+				.menuiconslist>a:hover .menuiconslistentertaint{
+					background-position: -320px -567px;
+				}
+				.menuiconslist>a:hover .menuiconslistsports{
+					background-position: -97px -470px;
+				}
+				.menuiconslist>a:hover .menuiconslistshopping{
+					background-position: 0px -589px;
+				}
+				.menuiconslist>a:hover .menuiconslistours{
+					background-position: -295px -449px;
+				}
+					.menuicon{
+						display: inline-block;
+						height: 16px;
+						background-image: url('https://s.pstatic.net/static/www/m/2018/sp_main_v181115a.png');
+						background-size: 655px 642px;
+					}
+					.menuiconmargin{
+						margin-left: 5px;
+					}
+					.menuiconslistnews{
+						width: 28px;
+						background-position: -283px -539px;
+					}
+					.menuiconslistentertaint{
+						width: 27px;
+						background-position: -510px -539px;
+					}
+					.menuiconslistsports{
+						width: 42px;
+						background-position: -144px -470px;
+					}
+					.menuiconslistshopping{
+						width: 26px;
+						background-position: -539px -567px;
+					}
+					.menuiconslistours{
+						width: 54px;
+						background-position: -385px -421px;
+					}
+			.pluspanel{
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				width: 41px;
+				height: 42px;
+				border-left: solid 1px #CCCCCC;
+			}
+				.pluspanelicon{
+					display: block;
+					width: 14px;
+					height: 15px;
+					background-position: -627px -401px;
+					margin: 14px auto 13px;
+					background-image: url('https://s.pstatic.net/static/www/m/2018/sp_main_v181115a.png');
+    	    background-size: 655px 642px;
+				}
+		.menuhamburg{
+			display: none;
+			width: 50px;
+			height: 48px;
+			vertical-align: top;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+		}
+			.menuhamburgmenu{
+				display: block;
+				width: 22px;
+				height: 17px;
+				position: absolute;
+				top: 12px;
+				left: 14px;
+				background-position: -599px -275px;
+				background-image: url('https://s.pstatic.net/static/www/m/2018/sp_main_v181115a.png');
+				background-size: 655px 642px;
+			}
+		.menuhamburgopenlist{
+			display: none;
+			position: absolute;
+			top: 42px;
+			left: 0px;
+			width: 150px;
+			text-align: center;
+			background-color: #CCCCCC;
+			z-index: 10;
+		}
+			.menuhamburglist{
+				border-bottom: solid 1px #555555;
+			}
+			.menuhamburglist>a{
+				display: inline-block;
+				height: 55px;
+				line-height: 55px;
+				padding: 0px 5px;
+				text-decoration: none;
+			}
+			.menuhamburglist:hover{
+				background-color: #EEEE00;
+			}
+	@media (max-width: 633px){
+		.menu{
+			background-color: #555555;
+			position: relative;
+		}
+			.menuhamburg{
+				display: inline-block;
+			}
+			.menuhamburgopenlist{
+				display: block;
+			}
+			.menuicons{
+				display: none;
+			}
 	}
 .main::after{
 	clear: both;
