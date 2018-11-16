@@ -117,12 +117,13 @@
 			.menu-contents{
 				width: 100%;
 				height: 100%;
+				display: table;
 			}
 				.menu-content{
-					float: left;
-					width: 20%;
-					height: 46px;
+					width: 400px;
+					display: table-cell;
 					text-align: center;
+					line-height: 44px;
 				}
 					.menu-common{
 						display: block;
