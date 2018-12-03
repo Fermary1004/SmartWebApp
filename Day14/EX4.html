@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+		src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+		crossorigin="anonymous"></script>
+	<title>YongYongYongYong</title>
+</head>
+<body>
+	테스트
+	<div>
+		과일 리스트
+		<ol>
+			<li>사과</li>
+			<li>배</li>
+			<li>바나나</li>
+		</ol>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('li').parents().css('border','solid 1px red');
+			// li의 부모들 전부이므로, ol, div, body, html이 적용
+			$('li').parentsUntil('html').css('border','solid 1px blue');
+			// li의 부모들 중 html전까지이므로, ol과 div, body가 적용
+			$('li').parent().css('border','solid 1px black');
+			// li의 부모만 대상으로 하므로 ol하나만 적용
+
+			$('div').find('li').css('color','red');
+			// div의 자식중 li태그를 대상으로 하므로 li태그들만 적용
+		});
+	</script>
+</body>
+</html>

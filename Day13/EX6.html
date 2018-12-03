@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+	crossorigin="anonymous"></script>
+	<title>JQ7</title>
+	<style>
+		.input{
+			width: 100px;
+			height: 40px;
+		}
+		.focusedred{
+			outline-color: #FF0000;
+		}
+	</style>
+</head>
+<body>
+	<input type="text">
+	<script>
+		$(document).ready(function(){
+			$('input').focus(function(){
+				$(this).addClass('focusedred');
+			});
+			// $('input').blur(function(){
+			// 	$(this).removeClass('focusedred');
+			// });
+			// outline은 애초에 기본적으로 focused일때만 발생하기 때문에 굳이 빼줄 필요가 없다
+		});
+	</script>
+</body>
+</html>

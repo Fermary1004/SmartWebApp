@@ -1,0 +1,937 @@
+@charset 'utf-8';
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 12px;
+    font-family: Dotum, '돋움', Helvetica, "Apple SD Gothic Neo", sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+.inlineblock{
+    display: inline-block;
+}
+#top{
+    min-width: 1100px;
+}
+#top>div{
+    width: calc(100%);
+}
+    #uppertop{
+        border-bottom: solid 1px #DCDCDC;
+    }
+        #uppertopdetail{
+            width: 1080px;
+            height: 130px;
+            margin: 0 auto;
+            position: relative;
+        }
+        #uppertopright{
+            position: absolute;
+            width: 255px;
+            top: 11px;
+            right: -5px;
+        }
+            #startpage{
+                line-height: 21px;
+                font-size: 11px;
+                color: #808080;
+                float: left;
+                text-decoration: none;
+            }
+            #startmark{
+                display: inline-block;
+                margin-left: 5px;
+                width: 6px;
+                height: 7px;
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+                background-position: -158px -94px;
+            }
+            .startblank{
+                width: 1px;
+                height: 11px;
+                background: #CACCD1;
+                float: left;
+                margin: 5px 4px 0 9px;
+            }
+            #juniornaver{
+                width: 68px;
+                height: 21px;
+                float: left;
+                padding: 5px;
+                text-decoration: none;
+            }
+            #juniornaverinner{
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+                background-position: 0 -120px;
+                height: 11px;
+                width: 58px;
+                display: block;
+                z-index: 10;
+            }
+            #juniornaverinner:hover{
+                background-position: -68px  -120px;
+            }
+            #happybean{
+                height: 21px;
+                width: 44px;
+                padding: 5px;
+                float: left;
+                text-decoration: none;
+            }
+            #happybeaninner{
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+                background-position: -143px  -52px;
+                height: 11px;
+                width: 34px;
+                display: block;
+                z-index: 10;
+            }
+            #happybeaninner:hover{
+                background-position: -143px  -73px;
+            }
+            #uppertopright>#startpage:hover{
+                text-decoration: underline;
+            }
+        #naverlogo{
+            position: absolute;
+            top: 50%;
+            left: -2px;
+            margin-top: -25px;
+        }
+            #naverlogodetail{
+                display: block;
+                width: 198px;
+                height: 48px;
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+                background-position: -4px -4px;
+            }
+        .searchbox{
+            position: absolute;
+            left: 219px;
+            top: 50%;
+            margin-top: -20px;
+        }
+            .searchboxinput{
+                border: solid 2px #03CF5D;
+                display: inline-block;
+                width: 523px;
+                height: 49px;
+            }
+            .searchboxinput>input{
+                outline: 0px;
+                border: 0px;
+                width: 405px;
+                height: 23px;
+                margin: 12px 0px 0px 9px;
+                font-size: 18px;
+                font-weight: bold;
+                line-height: 23px;
+            }
+            .keyboard{
+                width: 31px;
+                height: 41px;
+                position: absolute;
+                top: 50%;
+                right: 76px;
+                margin-top: -22px;
+                padding: 15px 6px;
+                cursor: pointer;
+            }
+                .keyboardicon{
+                    display: block;
+                    width: 19px;
+                    height: 11px;
+                    background-position: -33px -60px;
+                    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+                }
+            .autocomplete{
+                width: 27px;
+                height: 42px;
+                position: absolute;
+                right: 49px;
+                top: 50%;
+                margin-top: -22px;
+                padding: 19px 12px 19px 6px;
+                cursor: pointer;
+            }
+                .autocompleteicon{
+                    display: block;
+                    width: 9px;
+                    height: 4px;
+                    background-position: -87px -60px;
+                    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+								}
+								.autocompletetoggle{
+									position: absolute;
+									display: none;
+									left: 219px;
+									top: 50%;
+									margin-top: 27px;
+									border: solid 1px #DCDCDC;
+									background-color: #FFFFFF;
+									color: #666666;
+									width: 523px;
+									height: 90px;
+									z-index: 1;
+								}
+									.autocompletetoggleupper{
+										padding: 17px 15px 15px;
+										font-size: 12px;
+										line-height: 23px;
+										height: 55px;
+									}
+									.autocompletetogglelower{
+										overflow: hidden;
+										clear: both;
+										width: 100%;
+										padding: 8px 0px;
+										background: #F9FAFC;
+										height: 33px;
+										font-size: 11px;
+										line-height: 1.3em;
+										letter-spacing: -1px;
+									}
+									.autocompletetogglelower a{
+										margin: 0px 3px;
+										color: #666666;
+										text-decoration: none;
+									}
+									.autocompletetogglelower a:hover{
+										text-decoration: underline;
+									}
+										.autocompletetogglehelp{
+											float: left;
+											padding: 2px 0px 0px 12px;
+										}
+										.autocompletetogglecall{
+											float: left;
+											padding: 2px 0px 0px 12px;
+										}
+										.autocompletetoggleoff{
+											float: right;
+											padding: 2px 12px 0px 0px;
+										}
+            .searchboxbutton{
+                background-color: #03CF5D;
+                width: 49px;
+                height: 49px;
+                position: absolute;
+                right: 0px;
+                top: 0px;
+                border: 0px;
+            }
+                .searchicon{
+                    width: 21px;
+                    height: 21px;
+                    position: absolute;
+                    top: 14px;
+                    left: 14px;
+                    background-position: -4px -60px;
+                    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_search.svg');
+                }
+    #lowertop{
+        border-bottom: solid 1px #C0C0C0;
+        height: 47px;
+    }
+        #lowertopdetail{
+            width: 1080px;
+            height: 32px;
+            margin: 0 auto;
+            position: relative;
+            display: table;
+            /* 테이블로 만들어서 우측으로 배열되게 한다, 하위 애들을 block으로 만들기 위함 */
+            table-layout: fixed;
+            clear: both;
+            content: "";
+        }
+        #menugreen{
+            width: 303px;
+            height: 32px;
+            padding-left: 4px;
+        }
+        #menublack{
+            width: 366px;
+            height: 32px;
+            padding-left: 14px;
+        }
+        .menu{
+            position: relative;
+            float: left;
+            padding-top: 16px;
+            list-style: none;
+        }
+            .list{
+                float: left;
+                padding-left: 14px;
+                display: list-item;
+                /* 리스트를 우측으로 밀어주는 것 */
+            }
+            .list>a{
+                height: 16px;
+                background-image: url('https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png');
+                display: block;
+            }
+            #listfirst{
+                padding-left: 0px;
+            }
+                .mail{
+                    width: 25px;
+                    background-position: -244px -233px;
+                }
+                .cafe{
+                    width: 27px;
+                    background-position: -279px -130px;
+                }
+                .blog{
+                    width: 40px;
+                    background-position: -150px -182px;
+                }
+                .kin{
+                    width: 40px;
+                    background-position: -102px -156px;
+                }
+                .shopping{
+                    width: 26px;
+                    background-position: -128px -104px;
+                }
+                .pay{
+                    width: 25px;
+                    background-position: -107px -285px;
+                }
+                .tv{
+                    margin-top: -1px;
+                    width: 32px;
+                    background-position: -125px -130px;
+                }
+                .dic{
+                    width: 26px;
+                    background-position: 0 -259px;
+                }
+                .news{
+                    width: 28px;
+                    background-position: -279px -26px;
+                }
+                .stock{
+                    width: 26px;
+                    background-position: -108px -259px;
+                }
+                .land{
+                    width: 40px;
+                    background-position: -152px -156px;
+                }
+                .map{
+                    width: 27px;
+                    background-position: -279px -208px;
+                }
+                .movie{
+                    width: 27px;
+                    background-position: -279px -52px;
+                }
+                .music{
+                    width: 26px;
+                    background-position: -144px -259px;
+                }
+                .book{
+                    width: 13px;
+                    background-position: -140px -78px;
+                }
+                .webtoon{
+                    width: 27px;
+                    background-position: -279px -78px;
+                }
+        .menubar{
+            width: 1px;
+            height: 14px;
+            background: #DCDCDC;
+            float: left;
+            margin: 18px 16px 0px;
+        }
+        .seemore{
+            margin-top: 16px;
+            width: 55px;
+            height: 16px;
+            background-image: url('https://s.pstatic.net/static/www/img/2018/sp_nav_v181019.png');
+            background-position: 0 -104px;
+            display: block;
+            position: relative;
+            float: left;
+        }
+        .menulast{
+            width: 198px;
+            height: 20px;
+            position: absolute;
+            right : 0px;
+            top: calc((100% + 15px) /2);
+            margin-top: -10px;
+            line-height: 20px;
+        }
+            .realnumber{
+                font-family: Arial, Sans-serif;
+                font-size: 16px;
+                color: #00AB33;
+                line-height: 20px;
+            }
+            .realsearch{
+                font-size: 14px;
+            }
+        .realsearcharrow{
+            width: 11px;
+            height: 6px;
+            background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+            background-position: -187px -73px;
+            position: absolute;
+            right: 0px;
+            top: calc((100% + 15px) /2);
+            margin-top: -3px;
+        }
+#outerbody{
+    min-width: 1100px;
+    background-color: #DCDCDC;
+}
+#innerbody>div{
+        height: calc(100%);
+}
+#innerbody{
+    width: 1100px;
+    margin: 0 auto;
+    padding-top: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0px;
+}
+    #leftinner>div,
+    #rightinner>div{
+        width: calc(100%);
+        margin-bottom: 8px;
+        border: solid 1px #C0C0C0;
+    }
+    #leftinner>div#leftinnertop{
+        border: solid 1px #DEB887;
+    }
+    #leftinner{
+        width: 740px;
+    }
+        #leftinnertop{
+            height: 120px;
+        }
+        #leftinnermiddle{
+            height: 46px;
+            position: relative;
+            background-color: #FFFFFF;
+        }
+            #newscast{
+                width: 738px;
+                height: 33px;
+                display: block;
+                padding: 15px 0 0 16px;
+            }
+            #newscast::after{
+                display: block;
+                clear: both;
+                content: "";
+            }
+            #newscast>h3{
+                display: inline-block;
+            }
+                #newscastfront{
+                    float: left;
+                }
+                #newscastfront>a{
+                    display: block;
+                    color: #000000;
+                    text-decoration: none;
+                    letter-spacing: -1px;
+                    font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+                    font-weight: bold;
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-right: 12px;
+                }
+                    .newstitleicon{
+                        display: inline-block;
+                        margin-left: 8px;
+                        width: 5px;
+                        height: 9px;
+                        background-position: -256px -100px;
+                        vertical-align: middle;
+                        background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
+                    }
+                #newscastmiddle{
+                    float: left;
+                    vertical-align: top;
+                    line-height: 20px;
+                    width: 340px;
+                    height: 20px;
+                    margin-top: -2px;
+                }
+                #newscastmiddle>a{
+                    text-decoration: none;
+                    color: #222222;
+                }
+                #newscastmiddle>a:visited{
+                    color: #888888;
+                }
+                #newscastmiddle>a:hover{
+                    text-decoration: underline;
+                }
+                .newscasttailli{
+                    float: left;
+                    margin-right: 14px;
+                }
+                #newscasttail{
+                    position: absolute;
+                    top: 50%;
+                    right: 2px;
+                    margin-top: -7px;
+                    display: table;
+                    table-layout: fixed;
+                    list-style: none;
+                }
+                #newscasttail::after{
+                    display: block; /* 아래 자식이나 자손들이 float: left;를 쓸 경우 무조건 넣어 준다고 생각하자 */
+                    clear: both; /* 아래 자식이나 자손들이 float: left;를 쓸 경우 무조건 넣어 준다고 생각하자 */
+                    content: ""; /* 아래 자식이나 자손들이 float: left;를 쓸 경우 무조건 넣어 준다고 생각하자 */
+                }
+                #newscasttail a{
+                        color: #666666;
+                        display: block;
+                        height: 15px;
+                        text-decoration: none;
+                        font-weight: 700;
+                        font-size: 13px;
+                        font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+                        line-height: 16px;
+                    }
+                #newscasttail a:hover{
+                    color: #000000;
+                }
+                #newscasttail>li>.tailnews{
+                    color: #00AB33;
+                }
+                #newscasttail>li>.tailnews:hover{
+                    color: #0B9500;
+                }
+        #leftinnerbottom{
+            height: 246px;
+            background-color: #FFFFFF;
+        }
+            .newslist{
+                height: 45px;
+                position: relative;
+                border-bottom: solid 1px #DCDCDC;
+            }
+                .newsstand{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    padding: 13px 0px 0px 16px;
+                }
+                .newsstand>a{
+                    display: block;
+                    color: #000000;
+                    letter-spacing: -1px;
+                    font-weight: bold;
+                    font-size: 14px;
+                    font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+                    line-height: 20px;
+                    text-decoration: none;
+                }
+                .newslistfront{
+                    position: absolute;
+                    top: 0px;
+                    left: 102px;
+                    padding: 13px 0px;
+                }
+                    .newslistfrontsort{
+                        display: table;
+                        clear: both;
+                        table-layout: fixed;
+                        content: "";
+                    }
+                    .newslistfrontsort>a{
+                        display: block;
+                        color: #666666;
+                        letter-spacing: -1px;
+                        font-weight: bold;
+                        font-size: 14px;
+                        font-family: NanumSquare, Dotum, "돋움", Helvetica, AppleSDGothicNeo, sans-serif;
+                        line-height: 20px;
+                        text-decoration: none;
+                        float: left;
+                    }
+                        .newslistfrontsort .newslistfirst{
+                            color: #000000;
+                        }
+                        .newslistfrontbar{
+                            display: block;
+                            margin: 2px 15px 0px;
+                            width: 1px;
+                            height: 15px;
+                            background-color: #DCDCDC;
+                            float: left;
+                        }
+                .newslisttail{
+                    position: absolute;
+                    display: block;
+                    top: 0px;
+                    right: 0px;
+                    height: 44px;
+                }
+                    .newslisttailsort{
+                        float: left;
+                    }
+                    .newslisttailsort>a{
+                        display: block;
+                        float: left;
+                        margin-right: 10px;
+                        width: 32px;
+                        height: 44px;
+                        text-decoration: none;
+                    }
+                    .newslisttailsort i{
+                        display: block;
+                        float: left;
+                        margin-top: 13px;
+                        width: 18px;
+                        height: 18px;
+                        background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
+                    }
+                        .newslisttail1{
+                            background-position: -228px -124px;
+                        }
+                        .newslisttail2{
+                            background-position: 0px -193px;
+                        }
+                        .newslisttail3{
+                            background-position: -28px -193px;
+                        }
+                    .newstailarrow{
+                        height: 44px;
+                        float: left;
+                        list-style: none;
+                    }
+                        .newstailarrows{
+                            float: left;
+                            border-left: solid 1px #DCDCDC;
+                        }
+                        .newstailarrows>a{
+                            display: block;
+                            width: 44px;
+                            height: 44px;
+                            text-decoration: none;
+                        }
+                        .newstailarrows i{
+                            display: inline-block;
+                            width: 8px;
+                            height: 16px;
+                            margin: 14px 0px 0px 18px;
+                            background-image: url('https://s.pstatic.net/static/www/img/2018/sp_newscast_v180511.png');
+                        }
+                            .newsleftarrowicon{
+                                background-position: -254px -24px;
+                            }
+                            .newsrightarrowicon{
+                                background-position: -102px -193px;
+                            }
+            .panels{
+                width: 100%;
+                height: 200px;
+                position: relative;
+            }
+                .api-list{
+                    width: 104%;
+                    height: 199px;
+                    font-size: 0px;
+                    overflow: hidden;
+                    list-style: none;
+                }
+                .api-list::after{
+                    clear: both;
+                    content: "";
+                    display: block;
+                }
+                .api-list>li{
+                    width: 123px;
+                    height: 67px;
+                    float: left;
+                    z-index: 0;
+                    padding: 21px 0px 22px;
+                    border-right: 1px solid #DCDCDC;
+                }
+                .api-list>li>a>img{
+                    height: 24px;
+                    width: auto;
+                    /* auto는 고정된 높이에 맞춰 가로를 비율에 맞춰서 조정해준다는 의미로 넣은 것 */
+                }
+                .api-list>li>a{
+                    text-align: center;
+                    display: block;
+                }
+                /* .toppenals{
+                    position: absolute;
+                    top: 0px;
+                    left: 0px;
+                    clear: both;
+                    content: "";
+                }
+                    .panelsteps{
+                        display: block;
+                        float: left;
+                        align-content: center;
+                        text-align: center;
+                        padding: 21px 0px 22px;
+                        width: 123px;
+                        height: 66px;
+                        border-right: 1px solid #DCDCDC;
+                    }
+                .middlepanels{
+                    position: absolute;
+                    top: 67px;
+                    left: 0px;
+                    clear: both;
+                    content: "";
+                }
+                .bottompanels{
+                    position: absolute;
+                    bottom: 1px;
+                    left: 0px;
+                    clear: both;
+                    content: "";
+								}*/
+								.panelbordertop,
+								.panelborderbottom{
+										position: absolute;
+										left: 0px;
+										z-index: 10;
+										display: block;
+										width: 100%;
+										height: 1px;
+										background-color: #DCDCDC;
+								}
+								.panelbordertop{
+										top: 66px;
+								}
+								.panelborderbottom{
+										bottom: 66px;
+								}
+                .panelside{
+										position: absolute;
+										top: 0px;
+										right: 0px;
+										z-index: 1;
+										display: block;
+										width: 1px;
+										height: 199px;
+										background-color: #FFFFFF;
+                }
+    #rightinner{
+        width: 330px;
+        float: right;
+    }
+        #rightinnertop{
+            background-color: #FFFFFF;
+            height: 120px;
+            position: relative;
+            /* loginleft를 absolute로 만들기 위해 부모나 조상 중 하나가 반드시 relative여야 한다 */
+            /* 어느쪽이건 relative가 된 쪽을 기준으로 계산하게 된다 */
+        }
+        #rightinnertop *{
+            color: #808080;
+            text-decoration: none;
+        }
+            #login{
+                width: 330px;
+                height: 93px;
+                padding: 15px 25px;
+            }
+            #login>p{
+                line-height: 14px;
+            }
+                .loginimg{
+                    display: block;
+                    height: 37px;
+                    margin-top: 12px;
+                    background-image: url('https://s.pstatic.net/static/www/img/2018/sp_login_v180727.png');
+                    background-position: 0 -47px;
+                }
+                .loginbottom {
+                    width: 280px;
+                    height: 38px;
+                    position: absolute;
+                    /* loginleft를 absolute로 만들기 위해 부모나 조상 중 하나가 반드시 relative여야 한다 */
+                    font-size: 0px;
+                    /* 가운데 점(·)이 서로 붙게 만들기 위해서 해당 블럭의 폰트를 전부 0으로 만들어 준다 */
+                    /* 지금은 전역 폰트가 12로 되어있어서 상관없지만, 전역을 0으로 이미 만들었을 경우 가운데 점(·)를 싸고 있는 */
+                    /* span태그를 따로 폰트 사이즈를 지정해준다 */
+                    line-height: 38px;
+                    left: 25px;
+                    bottom: 0px;
+                }
+                #rightinnertop .loginbottom>a:hover{
+                    /* 위에서 rightinnertop의 자손태그 전부에 text-decoratiob을 없엤기 떄문에 그 냥 할경우 동작하지 않는다 */
+                    /* 때문에 조상을 강하게 불러서 우선권을 올려서 부여해줫다 */
+                    text-decoration: underline;
+                }
+                .rightfloating{
+                    float: right;
+                }
+        #rightinnermiddle{
+            height: 142px;
+        }
+        #rightinnermiddle>div{
+            background-color: #FFFFFF;
+        }
+            .timesquarehead{
+                position: relative;
+                padding-left: 15px;
+                height: 34px;
+                border-bottom: 1px solid #DCDCDC;
+            }
+            .timesquarehead>div{
+                display: inline-block;
+            }
+                .timesquareheadtitle{
+                    padding: 9px 0px 7px;
+                    max-width: 208px;
+                    width: 208px;
+                    letter-spacing: -1px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                    .hi_datecover{
+                        position: relative;
+                        color: #000000;
+                        top: 1px;
+                        text-decoration: none;
+                    }
+                        .hi_date{
+                            font-weight: bold;
+                            font-size: 14px;
+                            line-height: 17px;
+                        }
+                        .hi_date:hover{
+                            text-decoration: underline;
+                        }
+                        .hi_day{
+                            vertical-align: top;
+                            margin-left: 3px;
+                            font-weight: bold;
+                            font-size: 13px;
+                            line-height: 16px;
+                        }
+                    .timesquarebar{
+                        display: inline-block;
+                        margin: 0 -1px 0 4px;
+                        vertical-align: -1px;
+                        color: #DCDCDC;
+                        font-style: normal;
+                        font-size: 15px;
+                        line-height: 16px;
+                    }
+                    .hi_tail{
+                        max-width: 130px;
+                        color: #888888;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        text-decoration: none;
+                    }
+                    .hi_tail:hover{
+                        text-decoration: underline;
+                    }
+                        .hi_tailicon{
+                            display: inline-block;
+                            margin: 4px 4px 0 7px;
+                            width: 5px;
+                            height: 9px;
+                            background-position: -433px -377px;
+                            background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png');
+                        }
+                .timesquareheadcount{
+                    position: absolute;
+                    top: 10px;
+                    right: 0px;
+                    margin-right: 78px;
+                    color: #888888;
+                    line-height: 14px;
+                    font-family: Tahoma, sans-serif;
+                }
+                    .colorblack{
+                        color: #000000;
+                    }
+                .timesquareheadpage{
+                    position: absolute;
+                    width: 68px;
+                    height: 34px;
+                    right: 0px;
+                    top: 0px;
+                    font-size: 0px;
+                }
+                    .timesquareleftarrow,
+                    .timesquarerightarrow{
+                        display: inline-block;
+                        text-align: center;
+                        width: 34px;
+                        height: 33px;
+                        border-left: solid 1px #DCDCDC;
+                        text-decoration: none;
+                        padding: 11px 0px;
+                    }
+                    #timeleftarrow{
+                        display: inline-block;
+                        width: 6px;
+                        height: 11px;
+                        background-position: -433px -303px;
+                        background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png');
+                    }
+                    #timeleftarrow:hover{
+                        background-position: -449px -303px;
+                    }
+                    #timerightarrow{
+                        display: inline-block;
+                        width: 6px;
+                        height: 11px;
+                        background-position: -433px -324px;
+                        background-image: url('https://s.pstatic.net/static/www/img/2017/sp_timesquare_v170913a.png');
+                    }
+                    #timerightarrow:hover{
+                        background-position: -449px -324px;
+                    }
+            .timesquare{
+                height: 106px;
+            }
+                .pleasesecret{
+                    display: block;
+                    padding: 22px 15px 18px;
+                    text-decoration: none;
+                }
+                    .pleasesecreth{
+                        padding-bottom: 5px;
+                        color: #222222;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+                    .pleasesecretv{
+                        padding-bottom: 9px;
+                        padding-left: 1px;
+                        color: #222222;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font: 16px/20px Arial,sans-serif;
+                        font-weight: bold;
+                    }
+                    .pleasesecrets{
+                        color: #888888;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        font-size: 12px;
+                        line-height: 16px;
+                    }
+        #rightinner>#rightinnerbottom{
+            border: 0px;
+            height: 150px;
+        }

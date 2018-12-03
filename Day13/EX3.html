@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="EX3.css">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+	crossorigin="anonymous"></script>
+	<title>JQ4</title>
+	<style>
+		.bluebox{
+			background-color: #6666CC;
+			color: #FFFF00;
+			height: 100px;
+		}
+		.redbox{
+			background-color: #CC6666;
+			color: #FFFFFF;
+			height: 100px;
+		}
+		.display-none{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="redbox">123</div>
+	<div class="bluebox">456</div>
+	<div id="valid" class="display-none">유효성 검사</div>
+	<button class="removebtn">REMOVED!</button>
+	<button class="addbtn">EXTENDED!</button>
+	<button class="validbtn">VALD!!!</button>
+	<script>
+		$(document).ready(function(){
+			$(".removebtn").click(function(){
+				$('.redbox').removeClass('redbox');
+			});
+			$(".addbtn").click(function(){
+				$('div').addClass('redbox');
+			});
+			$(".validbtn").click(function(){
+				$('#valid').toggleClass('display-none');
+			});
+		});
+	</script>
+</body>
+</html>

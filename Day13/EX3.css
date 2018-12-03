@@ -1,0 +1,8 @@
+@charset 'utf-8';
+*{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}

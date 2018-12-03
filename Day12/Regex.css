@@ -1,0 +1,25 @@
+@charset 'utf-8';
+
+*{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+.relative{
+	position: relative;
+}
+.absolute{
+	position: absolute;
+}
+.alertInput{
+	top: 23px;
+	left: 0px;
+}
+.inputBody{
+	margin: 10px;
+}
+.inputBody>input{
+	width: 400px;
+}

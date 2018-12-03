@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>gEBI</title>
+</head>
+<body>
+	<input type="text" id="inputId">
+	<button onclick="alertMassage()">클릭</button>
+	<br>
+	<br>
+	<div>
+		<input type="password" id="Pwd" placeholder="비밀번호를 입력하세요">
+	</div>
+	<div>
+		<input type="password" id="RePwd" placeholder="한번 더 입력하세요">
+	</div>
+	<button onclick="passwordcheck()">비밀번호 확인</button>
+	<br>
+	<br>
+	<button onclick="showDetail()">입력내역 확인하기</button>
+	<div id="detail"></div>
+
+	<script>
+		var inputlist = new Array();
+		function alertMassage(){
+			var inputtext = document.getElementById('inputId').value;
+			inputlist.push(inputtext);
+			alert(inputtext);
+		}
+		function passwordcheck(){
+			var Pwdinput = document.getElementById('Pwd').value;
+			var RePwdinput = document.getElementById('RePwd').value;
+			if (Pwdinput == ""){
+				alert("비밀번호를 입력하세요!")
+				return;
+			}
+			if ((Pwdinput != "")&&(RePwdinput == "")){
+				alert("비밀번호를 한 번 더 입력하세요!")
+				return;
+			}
+			if (Pwdinput == RePwdinput){
+				alert("어서오세요!");
+			}
+			else alert("두 비밀번호가 틀립니다!");
+		}
+		function showDetail(){
+			var details = document.getElementById('detail');
+			for (var i=0;i<inputlist.length;i++){
+				var subDiv = document.createElement('div');
+				var inputlisttext = document.createTextNode(inputlist[i]);
+				details.appendChild(subDiv);
+				details.class = "subDetails";
+				subDiv.appendChild(inputlisttext);
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+		src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="EX5.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+		integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<title>YongYongYongYongYong</title>
+</head>
+<body>
+	<div class="container">
+		<div class="menufix">
+			<div class="menu">
+				<div class="menulist">
+					<div class="menu1">
+						<a href="#">MENU1</a>
+					</div>
+					<div class="menu2">
+						<a href="#">MENU2</a>
+					</div>
+					<div class="menu3">
+						<a href="#">MENU3</a>
+					</div>
+				</div>
+				<div class="hammenu">
+					<i class="fas fa-bars"></i>
+				</div>
+				<div class="slidemenu">
+					<div class="hammenu1">
+						<a href="#">MENU1</a>
+					</div>
+					<div class="hammenu2">
+						<a href="#">MENU2</a>
+					</div>
+					<div class="hammenu3">
+						<a href="#">MENU3</a>
+					</div>
+					<div class="hammenu4">
+						<a href="#">MENU4</a>
+					</div>
+					<div class="hammenu5">
+						<a href="#">MENU5</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contents"></div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('.hammenu').click(function(){
+				$('.slidemenu').slideToggle();
+			});
+			$('.slidemenu>div>a').click(function(){
+				invisibleSlideMenu();
+				test();
+			});
+			$('.slidemenu').mouseleave(function(){
+				invisibleSlideMenu();
+			});
+			$(window).resize(function(){
+				// console.log($(window).width());
+				// 숫자가 다르게 나오는 이유는 슬라이드 바 때문이다
+				if($(window).width()>623){
+					$('.slidemenu').hide();
+				}
+			});
+
+			function invisibleSlideMenu(){
+				$('.slidemenu').slideUp();
+			}
+			function test(){
+				$('.contents').append('<h1>&nbsp&nbsp잔짜잔~☆</h1>');
+			}
+		});
+	</script>
+</body>
+</html>

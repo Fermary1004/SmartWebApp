@@ -1,0 +1,72 @@
+@charset 'utf-8';
+
+*{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+}
+
+.innercontainer{
+	width: 400px;
+	margin: 50px auto 0px;
+	text-align: center;
+	background-color: #DCDCDC;
+}
+.jointitle{
+	height: 70px;
+	font-size: 40px;
+	text-align: center;
+	padding-top: 10px;
+	margin-bottom: 30px;
+}
+.inlineblock{
+	display: inline-block;
+}
+.inputcontainer>*{
+	font-size: 12px;
+	vertical-align: middle;
+	margin-bottom: 25px;
+}
+
+.inputtext{
+	text-align: center;
+	line-height: 30px;
+	width: 120px;
+}
+.inputs{
+	width: 250px;
+	height: 30px;
+	border: solid 1px #000000;
+	background-color: #FFFFFF;
+	position: relative;
+}
+.inputinner{
+	position: absolute;
+	top: calc(50% - 9px);
+	left: 5px;
+	width: 240px;
+	border: none;
+}
+.validity{
+	position: absolute;
+	top: calc(50% + 15px);
+	left: -1px;
+	width: 249px;
+	padding-left: 2px;
+	z-index: 1;
+	background-color: #FFFF66;
+	color: #FF0000;
+	border: none;
+}
+.genderinput{
+	width: 125px;
+	text-align: left;
+}
+.bumitbtn{
+	margin-bottom: 30px;
+}
+.gendertext{
+	margin-left: 10px;
+}

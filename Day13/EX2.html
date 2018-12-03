@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+	crossorigin="anonymous"></script>
+	<!-- 색상등의 jqueryui가 필요한 경우 위의 스크립트를 불러와줘야 한다 -->
+	<title>JQJQJQ</title>
+</head>
+<body>
+	<a href="http://naver.com" target="_blank">네이버</a>
+	<script>
+		$(document).ready(function(){
+			var a = $('a');
+			a.attr("style", "text-decoration : none");
+
+			$('a').mouseleave(function(){
+				if (a.attr('href') != 'http://daum.net'){
+					a.attr('href', 'http://daum.net');
+					a.text('다음');
+					moreBigerText('a', 'blue');					
+				} else {
+					a.attr('href', 'http://naver.com');
+					a.text('네이버');
+					moreBigerText('a', 'green');
+				}
+			});
+			function moreBigerText(target, color){
+				$(target).animate({ "color" : color, "font-weight" : "bold", "font-size" : "+=10px" }, "slow");
+				console.log(a.css('font-size'));
+			}
+		});
+	</script>
+</body>
+</html>

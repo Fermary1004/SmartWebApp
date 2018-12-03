@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="login.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+	<title>가입을 환영합니다!</title>
+</head>
+<body>
+	<div class="container">
+		<form action="/" method="GET">
+			<div class="innercontainer">
+				<div class="jointitle">회원 가입</div>
+				<div class="inputcontainer">
+					<div class="inlineblock inputtext">아이디</div>
+					<div class="inlineblock inputs">
+						<input class="inputinner" type="text" name="id" id="id" onchange="validityTest('validityId')" placeholder="아이디를 입력하세요">
+						<input class="validity" id="validityId" type="text" style="display:none" value="" disabled>
+					</div>
+				</div>
+				<div class="inputcontainer">
+					<div class="inlineblock inputtext">비밀번호</div>
+					<div class="inlineblock inputs">
+						<input class="inputinner" type="password" name="Pwd" id="Pwd" onchange="validityTest('validityPwd')" placeholder="비밀번호를 입력하세요">
+						<input class="validity" id="validityPwd" type="text" style="display:none" value="" disabled>
+					</div>
+				</div>
+				<div class="inputcontainer">
+					<div class="inlineblock inputtext">비밀번호 확인</div>
+					<div class="inlineblock inputs">
+						<input class="inputinner" type="password" name="RePwd" id="RePwd" onchange="validityTest('validityRePwd')" placeholder="비밀번호를 한번 더 입력하세요">
+						<input class="validity" id="validityRePwd" type="text" style="display:none" value="" disabled>
+					</div>
+				</div>
+				<div class="inputcontainer">
+					<div class="inlineblock inputtext">이메일 입력</div>
+					<div class="inlineblock inputs">
+						<input class="inputinner" type="email" name="email" id="email" onchange="validityTest('validityEmail')" placeholder="이메일 주소를 입력하세요">
+						<input class="validity" id="validityEmail" type="text" style="display:none" value="" disabled>
+					</div>
+				</div>
+				<div class="inputcontainer">
+					<div class="inlineblock inputtext">성별</div>
+					<div class="inlineblock genderinput">
+						<input type="radio" name="gender" value="male" checked>
+						<div class="inlineblock gendertext">남성</div>
+					</div>
+					<div class="inlineblock genderinput">
+						<input type="radio" name="gender" value="female">
+						<div class="inlineblock gendertext">여성</div>
+					</div>
+				</div>
+				<input class="btn btn-success col-4 bumitbtn" type="submit" value="회원가입" onclick="return totalCheck()">
+				<input class="btn btn-secondary col-4 bumitbtn" type="button" value="취소">
+			</div>
+		</form>
+	</div>
+	<script>
+		function totalCheck(){
+			var isSubmit = true;
+			if (!validityTest('validityId')){
+				isSubmit = false;
+				// 각 판정의 리턴이 false이면 최종 판정을 false로 바꿔준다
+			}
+			if (!validityTest('validityPwd')){
+				isSubmit = false;
+			}
+			if (!validityTest('validityRePwd')){
+				isSubmit = false;
+			}
+			if (!validityTest('validityEmail')){
+				isSubmit = false;
+			}
+			return isSubmit;
+		}
+		
+		function invisibleAlert(target, display, value){
+			var Alert = document.getElementById(target);
+
+			Alert.style.display = display;
+			Alert.value = value;
+			// 경고창을 지우거나 나타나게 하는 함수
+		}
+
+		function validityCheck(text, regex, inputtype){
+			// validityTest함수에서 넘어온 파라미터를 이용해서 실제 판정을 해주고, invisibleAlert함수로 파라미터를 넘겨주는 함수
+			// validityTest함수에서 마지막 파라미터로 넘어온 inputtype을 이용하여 스위치 문으로 판정하여 다른 파라미터를 준다
+
+			switch (inputtype){
+				case "id":{
+					if ((text.length > 4) && (text.length < 11)){
+						// 길이를 비교한다 regex에 이미 정의되어 있지만, 에러 메세지를 위해서 비교
+						if (regex.test(text)){
+							// 모두 맞다면 참을 리턴하고 끝
+							return true;
+						} else {
+							// 틀리다면 invisibleAlert함수를 불러내어 경고창을 들어나게 만든다
+							// invisibleAlert함수는 목표, 디스플레이, 나올 메세지를 파라미터로 받는다
+							invisibleAlert('validityId', 'block', '반드시 영문자로 시작, 특수문자 사용불가');
+							return false;
+						}
+					} else {
+						invisibleAlert('validityId', 'block', '아이디는 5자이상, 10자이하');
+						return false;
+					}
+					break;
+				}
+				case "Pwd":{
+					if ((text.length > 7) && (text.length < 21)){
+						if (regex.test(text)){
+							return true;
+						} else {
+							invisibleAlert('validityPwd', 'block', '영문자, 숫자를 각 1자이상, 특수문자 사용불가');		
+							return false;
+						}
+					} else {
+						invisibleAlert('validityPwd', 'block', '비밀번호는 8자이상, 20자이하');
+						return false;
+					}
+					break;
+				}
+				case "RePwd":{
+					if (text == regex){
+						// Password확인은 두 input창의 데이터만 받았기 떄문에 두 변수의 이름이 text와 regex라고 해도 둘이 같은지만
+						// 판정하면 된다 맞다면 넘어가고, 틀리다면 invisibleAlert함수를 부른다
+						return true;
+					} else {
+						invisibleAlert('validityRePwd', 'block', '비밀번호와 비밀번호 확인이 같아야 함');
+						return false;
+					}
+					break;
+				}
+				case "email":{					
+					if (regex.test(text)){
+						return true;
+					} else {
+						invisibleAlert('validityEmail', 'block', '반드시 이메일 형식으로 입력');
+						return false;
+					}
+					break;
+				}
+			}
+		}
+
+		function validityTest(type){
+			invisibleAlert(type, 'none', '');
+			// 테스트를 시작하면 우선 invisibleAlert함수를 불러서 경고창을 지워준다
+			// type에 넘어오는 값에 따라 ID인지 Password인지 Password확인인지, Email체크인지 판단하기 위한 스위치 문으로 들어간다
+
+			switch (type){
+				case "validityId":{
+					var regexId = /^[a-zA-Z][a-zA-Z0-9]{4,9}$/;
+					var inputId = document.getElementById('id').value;
+					// ID일 경우 ID의 input창의 데이터를 참조하여 값이 있다면 validityCheck함수를 불러서 체크를 시작한다
+					
+					if (inputId != ""){
+						var result = validityCheck(inputId, regexId, 'id');
+						// 최종 판정을 위하여 validityCheck함수에서 리턴해준 결과를 리턴해준다
+					}
+					return result;
+					break;
+				}
+				case "validityPwd":{
+					var regexPwd = /^[a-zA-Z0-9]*(\d[a-zA-Z]|[a-zA-Z]\d)[a-zA-Z0-9]*$/;
+					var inputPwd = document.getElementById('Pwd').value;
+
+					if (inputPwd != ""){
+						var result = validityCheck(inputPwd, regexPwd, 'Pwd');
+					}
+					return result;
+					break;
+				}
+				case "validityRePwd":{
+					var inputPwd = document.getElementById('Pwd').value;
+					var inputRePwd = document.getElementById('RePwd').value;
+					// Password 확인의 경우 Regex가 필요없기 때문에 대신 Password의 input창의 데이터도 같이 불러내어 함수에 넘겨준다
+					// 함수에서 특성을 확인할 RePwd라는 타입 파라미터를 보내주기 때문에 그냥 데이터를 보내주면 된다
+
+					if ((inputPwd != "") && (inputRePwd != "")){
+						var result = validityCheck(inputPwd, inputRePwd, 'RePwd');
+					}
+					return result;
+					break;
+				}
+				case "validityEmail":{
+					var regexEmail = /^[a-zA-Z]\w*[@][a-zA-Z]\w+[.][a-zA-Z]+[.]*[a-zA-Z]*$/;
+					var inputEmail = document.getElementById('email').value;
+
+					if (inputEmail != ""){
+						var result =	validityCheck(inputEmail, regexEmail, 'email');
+					}
+					return result;
+					break;
+				}
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="Regex.css">
+	<title>REGEX</title>
+</head>
+<body>
+	<div class="relative inputBody">
+		<input type="text" class="input" id="password" onchange="invisibleAlert('none', '')">
+		<input type="text" class="absolute alertInput" id="passwordAlert" value="" style="display:none" disabled>
+		<button onclick="regexTest()">체크</button>
+	</div>
+	<!-- <div id="errorMessageBox"></div> -->
+	<script>
+		function invisibleAlert(display, value){
+			var passwordAlert = document.getElementById('passwordAlert');
+			passwordAlert.style.display = display;
+			passwordAlert.value = value;
+		}
+		function regexTest(){
+			var testText = document.getElementById('password').value;
+			var regex = /^[a-zA-Z0-9]*(\d[a-zA-Z]|[a-zA-Z]\d)[a-zA-Z0-9]*$/;
+			var errorMessageLength = '비밀번호는 8자 이상, 20자 이하여야 합니다';
+			var errorMessageType = '비밀번호는 영문자과 숫자를 반드시 각각 1자이상 포함해야합니다';
+			// clearErrorMessage();
+
+			if ((testText.length > 7) && (testText.length < 21)){
+				if (regex.test(testText)){
+					alert("어서오세요!");
+					return true;
+				} else {
+					invisibleAlert('block', errorMessageType);
+					// creatErrorMessage(errorMessageType);
+					return false;
+				}
+			} else {
+				invisibleAlert('block', errorMessageLength);
+				// creatErrorMessage(errorMessageLength);
+			}
+		}
+		// function creatErrorMessage(message){
+		// 	var errorSpan = document.createElement('span');
+		// 	var errorMessage = document.createTextNode(message);
+		// 	errorSpan.appendChild(errorMessage);
+		// 	errorMessageBox.appendChild(errorSpan);
+		// }
+		// function clearErrorMessage(){
+		// 	var errorSpan = document.querySelector('#errorMessageBox span')
+		// 	if (errorSpan != null){
+		// 		errorMessageBox.removeChild(errorSpan);
+		// 	}
+		// }
+		// 위 함수는 태그를 직접 추가해서 구현하는 방식
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	<button onclick="show()">클릭</button>
+	<div id="content"></div>
+	Hello
+	<br>
+	<!-- 학년마다 반의 갯수가 다르기 때문에 선택한 학년에 따라 반의 숫자가 달라지게 만드는 예제 -->
+	<!-- 1학년 : 총 3개, 2학년 : 총 4개, 3학년 : 총 5개의 반을 가진 것으로 가정한다-->
+	<!-- 학년을 고르고 확인 버튼을 누르면 선택가능한 반의 범위가 달라지는 기작으로 작성한다 -->
+	학년
+	<select id="grade" onchange="getClasses()">
+		<!-- onchange는 요소가 바뀌었을때마다 해당 문을 실행하게 한다 -->
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+	</select>
+	반
+	<select id="classes"></select>
+	<script>
+		function show(){
+			var content = document.getElementById('content');
+			var subDiv = document.createElement('div');
+			// subDiv : <div></div>를 만듬
+			var text = document.createTextNode('안녕하세요');
+			// text : 텍스트 노드 안녕하세요를 생성
+			subDiv.appendChild(text);
+			// 텍스트를 subDiv에 붙혀줍니다
+			content.appendChild(subDiv);
+			// 고놈을 다시 붙혀줍니다
+			console.log(content);
+			console.log(subDiv);
+		}
+		var classlength = [3, 4, 5];
+		var classlist = new Array();
+
+		function getClasses(){
+			var grade = document.getElementById('grade');
+			var classes = document.getElementById('classes');
+			clearClasses(classes);
+			creatClasses(grade.value, classes);
+		}
+		function clearClasses(classes){
+			for (var i=0; i<classlist.length; i++){
+				classes.removeChild(classlist[i]);
+			}
+			classlist = new Array();
+		}
+		function creatClasses(grades, classes){
+			var classmaxlength = classlength[grades-1];
+			for (var i=0;i<classmaxlength;i++){
+				var options = document.createElement('option');
+				var texts = document.createTextNode(i+1);
+				options.value = i+1;
+				options.appendChild(texts);
+				classes.appendChild(options);
+				classlist.push(options);
+				}
+		}
+		getClasses();
+	</script>
+</body>
+</html>

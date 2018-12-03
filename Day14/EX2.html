@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+		src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+		crossorigin="anonymous"></script>
+	<title>YongYong</title>
+</head>
+<body>
+	<p class="text">안녕하세요? 저는 <span>댕댕이</span>입니다!</p>
+	<p>안녕하세요? 저는 <span>멍멍이</span>입니다!</p>
+	<script>
+		$(document).ready(function(){
+			var obj1 = $('p.text').text();
+			var obj2 = $('p').filter('.text').text();
+			var obj3 = $('p').not('.text').text();
+
+			console.log(obj1);
+			console.log(obj2);
+			console.log(obj3);
+		});
+	</script>
+</body>
+</html>
