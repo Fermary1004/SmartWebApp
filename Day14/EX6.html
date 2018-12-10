@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script
+		src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+		integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="EX6.css">
+	<title>YongYongYongYongYongYong</title>
+</head>
+<body>
+	<div class="container">
+		<div class="menubar">
+			<div class="tabmenu" id="menu1">MENU 1</div>
+			<div class="tabmenu" id="menu2">MENU 2</div>
+			<div class="tabmenu" id="menu3">MENU 3</div>
+			<div class="control" id="prev"><</div>
+			<div class="control" id="next">></div>
+		</div>
+		<div class="contentline">
+			<div class="contents content1">1</div>
+			<div class="contents content2">2</div>
+			<div class="contents content3">3</div>
+		</div>
+	</div>
+	<script>
+		$(document).ready(function(){
+			$('.tabmenu').first().css('border-bottom-color', 'white');
+			showContents(1);
+
+			$('.tabmenu').click(function(){
+				$('.tabmenu').css('border-bottom-color', 'black');
+				$(this).css('border-bottom-color', 'white');
+				var index = $(this).attr('id');
+				var number = getIndex(index, 'menu');
+				showContents(number);
+			});
+
+			function showContents(index){
+				$('.contents').css('display', 'none');
+				$('.content'+index).css('display', 'block');
+			}
+			function getIndex(target, id){
+				var index = target.indexOf(id);
+				var length = id.length;
+				return target.substr(index+length);
+			}
+
+			var index = 1;
+
+			$('#next').click(function(){
+				index++;
+				if(index > 3){
+					index = 1;
+				}
+				$('.tabmenu').css('border-bottom-color', 'black');
+				$('#menu'+index).css('border-bottom-color', 'white');
+				showContents(index);
+			});
+
+			$('#prev').click(function(){
+				index--;
+				if(index < 1){
+					index = 3;
+				}
+				$('.tabmenu').css('border-bottom-color', 'black');
+				$('#menu'+index).css('border-bottom-color', 'white');
+				showContents(index);
+			});
+		});
+	</script>
+</body>
+</html>

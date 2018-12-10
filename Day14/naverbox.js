@@ -37,6 +37,57 @@ $(document).ready(function() {
   ticker('.menulist', '-20px', 400, 2000);
   ticker('#newscastmiddle', '-20px', 500, 5000);
 
+  var timesquareindex = 1;
+  var timesquareindexmax = 6;
+
+  $('.timesquareleftarrow').click(function() {
+    prevBox('timesquareinner', timesquareindex, timesquareindexmax);
+    prevBox('hi_tail', timesquareindex, timesquareindexmax);
+    if (timesquareindex == 1) {
+      timesquareindex = timesquareindexmax;
+    } else timesquareindex = timesquareindex - 1;
+    $('.timesquareheadcount>b').text(timesquareindex);
+  });
+
+  $('.timesquarerightarrow').click(function() {
+    nextBox('timesquareinner', timesquareindex, timesquareindexmax);
+    nextBox('hi_tail', timesquareindex, timesquareindexmax);
+    if (timesquareindex == timesquareindexmax) {
+      timesquareindex = 1;
+    } else timesquareindex = timesquareindex + 1;
+    $('.timesquareheadcount>b').text(timesquareindex);
+  });
+
+  function nextBox(target, index, maxindex) {
+    if (index == maxindex) {
+      displayBox(target, 1)
+    } else displayBox(target, index + 1);
+  }
+
+  function prevBox(target, index, maxindex) {
+    if (index == 1) {
+      displayBox(target, maxindex)
+    } else displayBox(target, index - 1);
+  }
+
+  function displayBox(target, index) {
+    $('.' + target).removeClass('displayblock');
+    $('.' + target).eq(index - 1).addClass('displayblock');
+	}
+	
+	$('.popuprealmuneinner').click(function(){
+		var index = $(this).attr('id');
+		$('.popuprealmunebody').removeClass('displayblock');
+		$('.'+index+'list').addClass('displayblock');
+	});
+
+  displayBox('timesquareinner', timesquareindex);
+	displayBox('hi_tail', timesquareindex);
+	displayBox('popup1to10list', 1)
+
+  $('.api-list>li').hover(function() {
+    $(this).children('div').toggleClass('api-list-popup-zindex');
+  });
 
   $('.menulist').hover(function() {
     $('.popuprealsearch').toggleClass('displayblock');
@@ -50,11 +101,10 @@ $(document).ready(function() {
 
 
   // 타임 스퀘어 화살표 마우스 오버시 색변경
-  $('.timesquareleftarrow').mouseenter(function() {
-    $('.timeleftarrow').addClass('timeleftarrowchange');
+  $('.timesquareleftarrow').hover(function() {
+    $('.timeleftarrow').toggleClass('timeleftarrowchange');
   });
-  $('.timesquareleftarrow').mouseleave(function() {
-    $('.timeleftarrow').removeClass('timeleftarrowchange');
+  $('.timesquarerightarrow').hover(function() {
+    $('.timerightarrow').toggleClass('timerightarrowchange');
   });
-
 });
