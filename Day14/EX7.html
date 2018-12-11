@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <script src="EX1.js"></script>
+  <title>YONG!</title>
+  <style>
+    .input {
+      width: 200px;
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <input type="text" class="seeinput" id=input0 readonly>
+    <input type="text" class="seeinput" id=input1 readonly>
+    <input type="text" class="seeinput" id=input2 readonly>
+    <br><br>
+    <input type="checkbox" name="alram" id="alram" class="seeradio" value="알람"><label for="alram">알람</label>
+    <input type="checkbox" name="office" id="office" class="seeradio" value="오피스"><label for="office">오피스</label>
+    <input type="checkbox" name="movie" id="movie" class="seeradio" value="영화"><label for="movie">영화</label>
+    <input type="checkbox" name="movie" id="audioclip" class="seeradio" value="오디오클립"><label for="movie">오디오클립</label>
+    <input type="checkbox" name="movie" id="webfiction" class="seeradio" value="웹소설"><label for="movie">웹소설</label>
+  </div>
+</body>
+<script>
+  $(document).ready(function() {
+		var maxArray = 3;
+    var inputArray = [];
+
+    $('input[type="checkbox"]').click(function() {
+      var index = inputArray.indexOf($(this).val());
+
+      if (index < 0) {
+        inputArray.push($(this).val());
+      } else inputArray.splice(index, 1);
+
+      if (inputArray.length > maxArray) {
+        inputArray.pop();
+        $(this).prop('checked', '');
+        alert("no more than " + maxArray +" items!");
+      }
+
+      writeInput();
+      // $('input[type=text]').each(function() {
+      //   var text = $(this).val();
+      //   $(this).val('');
+      //   if (text != '') {
+      //     inputArray.push(text);
+      //   }
+      // });
+
+      // var check = $(this);
+      // var isContain = inputArray.indexOf(check.val());
+      // if (isContain < 0 && inputArray.length == 3){
+      // 	check.prop('checked', '');
+      // } else if (isContain < 0 && inputArray.length != 3){
+      // 	inputArray.push(check.val());
+      // 	check.prop('checked', '');
+      // } else {
+      // 	inputArray.splice(isContain, 1);
+      // }
+      // writeInput();
+    });
+
+    function writeInput() {
+			$('.seeinput').val('');
+			
+      for (var i = 0; i < inputArray.length; i++) {
+        $('.seeinput').eq(i).val(inputArray[i]);
+      }
+    }
+  });
+</script>
+
+</html>

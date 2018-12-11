@@ -63,7 +63,7 @@
     <div id="lowertop">
       <div id="lowertopdetail">
         <ul class="menu" id="menugreen">
-          <li class="list" id="listfirst">
+          <li class="list listfirst">
             <a href="#" class="mail"></a>
           </li>
           <li class="list">
@@ -86,7 +86,7 @@
           </li>
         </ul>
         <ul class="menu" id="menublack">
-          <li class="list" id="listfirst">
+          <li class="list listfirst">
             <a href="#" class="dic"></a>
           </li>
           <li class="list">
@@ -113,12 +113,20 @@
           <li class="list">
             <a href="#" class="webtoon"></a>
           </li>
+          <div class="seeconfig"></div>
         </ul>
         <div class="menubar"></div>
         <a href="#" class="seemore"></a>
         <div class="seemoreside">
-          <a href="#" class="seemoresideall">서비스 전체보기</a>
-          <a href="#" class="seemoresideconfig">메뉴설정</a>
+          <div class="seemoresidebegin">
+            <a href="#" class="seemoresideall">서비스 전체보기</a>
+            <a href="#" class="seemoresideconfig">메뉴설정</a>
+          </div>
+          <div class="seemoresidehidden">
+            <a href="#" class="seeconfigreset">초기화</a>
+            <a href="#" class="seeconfigconfirm">확인</a>
+            <a href="#" class="seeconfigcancel">취소</a>
+          </div>
           <a href="#" class="seemoresideclose">
             <span class="seemoresidecloseicon"></span>
           </a>
@@ -234,6 +242,8 @@
                 </li>
               </ul>
             </div>
+            <p class="popuprealbottom">2018.12.11. 09:09:00 기준<a href="#"><span class="popuprealbottomicon"></span></a>
+            </p>
           </div>
         </div>
         <!-- 실시간 검색 -->
@@ -242,7 +252,31 @@
   </div>
   <div id="outerbody">
     <div class="seemoremenuback"></div>
-    <div class="seemoremenu"></div>
+    <div class="seemoremenu">
+      <div>
+        <ul class="addmenu">
+          <li><input type="checkbox" name="seealram" id="seealram" class="seeradio" value="invalram">알림</li>
+        </ul>
+        <ul class="addmenu">
+          <li><input type="checkbox" name="seemovie" id="seemovie" class="seeradio" value="invmovie">영화</li>
+        </ul>
+        <ul class="addmenu">
+          <li><input type="checkbox" name="seeaudioclip" id="seeaudioclip" class="seeradio" value="invaudioclip">오디오클립</li>
+        </ul>
+        <ul class="addmenu">
+          <li><input type="checkbox" name="seeoffice" id="seeoffice" class="seeradio" value="invoffice">오피스</li>
+        </ul>
+        <ul class="addmenu">
+          <li><input type="checkbox" name="seewebfiction" id="seewebfiction" class="seeradio" value="invwebfiction">웹소설</li>
+        </ul>
+        <ul class="addmenu">
+          <li><input type="checkbox" name="seecar" id="seecar" class="seeradio" value="invcar">자동차</li>
+        </ul>
+        <ul class="addmenu">
+          <li><input type="checkbox" name="seeadress" id="seeadress" class="seeradio" value="invadress">주소록</li>
+        </ul>
+      </div>
+    </div>
     <div id="innerbody">
       <div class="inlineblock" id="leftinner">
         <div id="leftinnertop">
@@ -529,9 +563,15 @@
                 </div>
               </div>
             </div>
-            <div class="timesquareinner">2</div>
-            <div class="timesquareinner">3</div>
-            <div class="timesquareinner">4</div>
+            <div class="timesquareinner">
+              <div>News</div>
+            </div>
+            <div class="timesquareinner">
+              <div>Sports</div>
+            </div>
+            <div class="timesquareinner">
+              <div>Fund</div>
+            </div>
             <div class="timesquareinner">
               <div class="pleasesecret">
                 <p class="pleasesecreth">비밀 지키세요.</p>
@@ -539,7 +579,9 @@
                 <p class="pleasesecrets">플리즈 킵 잇 어 시크릿</p>
               </div>
             </div>
-            <div class="timesquareinner">6</div>
+            <div class="timesquareinner">
+              <div>Tools</div>
+            </div>
           </div>
           <!-- 타임 스퀘어 -->
         </div>

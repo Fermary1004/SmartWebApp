@@ -7,17 +7,20 @@ $(document).ready(function() {
 
   // 더보기, 닫기 버튼, 검은 바탕화면 클릭시 토글
   $('.seemore').click(function() {
-    seemoretoggle()
+    seemoreToggle();
+    seemoreConfigCancel();
   });
   $('.seemoresideclose').click(function() {
-    seemoretoggle()
+    seemoreToggle();
+    seemoreConfigCancel();
   });
   $('.seemoremenuback').click(function() {
-    seemoretoggle()
+    seemoreToggle();
+    seemoreConfigCancel();
   });
 
   // 따로 함수를 만들어서 활용
-  function seemoretoggle() {
+  function seemoreToggle() {
     $('.seemoremenuback').toggle();
     $('.seemoremenu').toggle();
     $('.seemoreside').toggle();
@@ -42,7 +45,8 @@ $(document).ready(function() {
 
   $('.timesquareleftarrow').click(function() {
     prevBox('timesquareinner', timesquareindex, timesquareindexmax);
-    prevBox('hi_tail', timesquareindex, timesquareindexmax);
+		prevBox('hi_tail', timesquareindex, timesquareindexmax);
+		
     if (timesquareindex == 1) {
       timesquareindex = timesquareindexmax;
     } else timesquareindex = timesquareindex - 1;
@@ -51,7 +55,8 @@ $(document).ready(function() {
 
   $('.timesquarerightarrow').click(function() {
     nextBox('timesquareinner', timesquareindex, timesquareindexmax);
-    nextBox('hi_tail', timesquareindex, timesquareindexmax);
+		nextBox('hi_tail', timesquareindex, timesquareindexmax);
+		
     if (timesquareindex == timesquareindexmax) {
       timesquareindex = 1;
     } else timesquareindex = timesquareindex + 1;
@@ -73,17 +78,21 @@ $(document).ready(function() {
   function displayBox(target, index) {
     $('.' + target).removeClass('displayblock');
     $('.' + target).eq(index - 1).addClass('displayblock');
-	}
-	
-	$('.popuprealmuneinner').click(function(){
+  }
+
+  $('.popuprealmuneinner').click(function() {
 		var index = $(this).attr('id');
-		$('.popuprealmunebody').removeClass('displayblock');
-		$('.'+index+'list').addClass('displayblock');
-	});
+
+    $('.popuprealmunebody').removeClass('displayblock');
+		$('.' + index + 'list').addClass('displayblock');
+		$('.popuprealmuneinner').removeClass('popupchoosed');
+		$(this).addClass('popupchoosed');
+  });
 
   displayBox('timesquareinner', timesquareindex);
-	displayBox('hi_tail', timesquareindex);
-	displayBox('popup1to10list', 1)
+  displayBox('hi_tail', timesquareindex);
+	displayBox('popup1to10list', 1);
+  $('#popup1to10').addClass('popupchoosed');
 
   $('.api-list>li').hover(function() {
     $(this).children('div').toggleClass('api-list-popup-zindex');
@@ -103,8 +112,84 @@ $(document).ready(function() {
   // 타임 스퀘어 화살표 마우스 오버시 색변경
   $('.timesquareleftarrow').hover(function() {
     $('.timeleftarrow').toggleClass('timeleftarrowchange');
-  });
+	});
   $('.timesquarerightarrow').hover(function() {
     $('.timerightarrow').toggleClass('timerightarrowchange');
   });
+
+  $('.seemoresideconfig').click(function() {
+    if (inputArray.length > 1) {
+      writeInput(inputArray);
+    } else $('#menublack').children('.list').addClass('displaynone');
+    seeConfigBox();
+    seemoreConfigOn();
+  });
+
+	var maxArray = 5;
+	var baseSetArray = [];
+	var inputArray = [];
+	
+	$('#menublack>.list>a').each(function(){
+		baseSetArray.push($(this).prop('class'));
+	});
+
+  $('.seeradio').click(function() {
+    var index = inputArray.indexOf($(this).val());
+
+    if (index < 0) {
+      inputArray.push($(this).val());
+    } else inputArray.splice(index, 1);
+
+    if (inputArray.length > maxArray) {
+      inputArray.pop();
+      $(this).prop('checked', '');
+      alert("no more than " + maxArray + " items!");
+    }
+    writeInput(inputArray);
+  });
+
+  function writeInput(array) {
+    $('#menublack').children('.list').addClass('displaynone');
+
+    for (var i = 0; i < array.length; i++) {
+      $('#menublack>.list').eq(i).removeClass('displaynone');
+      $('#menublack>.list').eq(i).children('a').removeClass();
+      $('#menublack>.list').eq(i).children('a').addClass(array[i]);
+    }
+    seeConfigBox();
+  }
+
+  function seeConfigBox() {
+    $('.seeconfig').html('');
+
+    for (var i = 0; i < (maxArray - inputArray.length); i++) {
+      $('.seeconfig').append('<span class="seeconfigbox"></span>');
+    }
+    $('.seeconfigbox').first().addClass('seeconfigboxfisrt');
+  }
+
+  function seemoreConfigOn() {
+    $('.seemoresidebegin').addClass('displaynone');
+    $('.seemoresidehidden').addClass('displayblock');
+    $('.seeconfig').addClass('displayinlineblock');
+    $('.seeradio').addClass('displayinlineblock');
+	}
+	
+	function seemoreConfigConfirm() {
+		$('.seemoresidebegin').removeClass('displaynone');
+    $('.seemoresidehidden').removeClass('displayblock');
+    $('.seeconfig').removeClass('displayinlineblock');
+    $('.seeradio').removeClass('displayinlineblock');
+	}
+
+  function seemoreConfigCancel() {
+    $('.seemoresidebegin').removeClass('displaynone');
+    $('.seemoresidehidden').removeClass('displayblock');
+    $('.seeconfig').removeClass('displayinlineblock');
+		$('.seeradio').removeClass('displayinlineblock');
+		$('.seeradio').prop('checked', '');
+		
+		writeInput(baseSetArray);
+		inputArray = [];
+  }
 });

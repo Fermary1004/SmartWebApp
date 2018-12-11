@@ -295,7 +295,7 @@
 }
 
 #menublack {
-  width: 366px;
+  /* width: 366px; */
   height: 32px;
   padding-left: 14px;
 }
@@ -320,7 +320,7 @@
   display: block;
 }
 
-#listfirst {
+.listfirst {
   padding-left: 0px;
 }
 
@@ -405,6 +405,41 @@
   background-position: -279px -78px;
 }
 
+.invalram {
+  width: 26px;
+  background-position: -252px -259px;
+}
+
+.invmovie {
+  width: 27px;
+  background-position: -279px -52px;
+}
+
+.invaudioclip {
+  width: 65px;
+  background-position: -91px -52px;
+}
+
+.invoffice {
+  width: 40px;
+  background-position: -229px -78px;
+}
+
+.invwebfiction {
+  width: 40px;
+  background-position: -229px -104px;
+}
+
+.invcar {
+  width: 40px;
+  background-position: -100px -182px;
+}
+
+.invadress {
+  width: 40px;
+  background-position: -229px -26px;
+}
+
 .menubar {
   width: 1px;
   height: 14px;
@@ -458,6 +493,24 @@
   float: left;
   margin-left: 5px;
   width: 70px;
+  height: 30px;
+  border: 1px solid #DCDCDC;
+  background: #FFFFFF;
+  color: #444444;
+  text-align: center;
+  text-decoration: none;
+  font-size: 12px;
+  line-height: 29px;
+}
+
+.seemoresidehidden {
+  display: none;
+}
+
+.seemoresidehidden>a {
+  float: left;
+  margin-left: 5px;
+  width: 50px;
   height: 30px;
   border: 1px solid #DCDCDC;
   background: #FFFFFF;
@@ -552,15 +605,13 @@
 .popuprealmuneinner {
   position: relative;
   z-index: 1;
-  background: #FFFFFF;
   color: #222222;
   float: left;
   margin-left: -1px;
   padding-top: 5px;
-  width: 126px;
   height: 17px;
   border: 1px solid #C0C0C0;
-  background: #F9FAFC;
+  background-color: #F9FAFC;
   color: #888888;
   vertical-align: top;
   text-align: center;
@@ -570,18 +621,35 @@
   height: 24px;
 }
 
+#popup1to10 {
+  width: 128px;
+}
+
+#popup11to20 {
+  width: 129px
+}
+
+.popupchoosed {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+.popuplistchoosed {
+  font-weight: bold;
+}
+
 .popuprealmunebody {
   display: none;
 }
 
 .popuprealmunebody>ul {
-  margin: 0 16px;
+  margin: 0px 16px;
   padding-bottom: 3px;
-  border-bottom: 1px solid #f1f3f6;
+  border-bottom: 1px solid #F1F3F6;
 }
 
 .popuprealmunebody li {
-  padding: 4px 0 0 21px;
+  padding: 4px 0px 0px 21px;
   height: 22px;
   list-style: none;
   position: relative;
@@ -629,6 +697,32 @@
   background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
 }
 
+.popuprealbottom {
+  padding: 5px 15px 0px;
+  color: #888888;
+  font-size: 11px;
+  line-height: 24px;
+}
+
+.popuprealbottom>a {
+  display: inline-block;
+  margin-top: -1px;
+  padding: 4px;
+  vertical-align: top;
+  line-height: 16px;
+  zoom: 1;
+}
+
+.popuprealbottomicon {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-position: -175px -20px;
+  vertical-align: top;
+  zoom: 1;
+  background-image: url('https://s.pstatic.net/static/www/img/2018/sp_main_v181019.png');
+}
+
 #outerbody {
   min-width: 1100px;
   background-color: #DCDCDC;
@@ -656,6 +750,29 @@
   left: 0px;
   background: #FFFFFF;
   z-index: 12;
+}
+
+.seeconfig {
+  display: none;
+  margin-top: -6px;
+}
+
+.seeconfigbox {
+  display: inline-block;
+  margin-left: 5px;
+  width: 62px;
+  height: 28px;
+  border: 1px solid #DCDCDC;
+  background: #FCFDFE;
+}
+
+.seeconfigboxfisrt {
+  border-color: #00B336;
+  margin-left: 15px;
+}
+
+.seeradio {
+  display: none;
 }
 
 #innerbody>div {
@@ -1432,6 +1549,10 @@
 .popuprealsearch:hover,
 .displayblock {
   display: block;
+}
+
+.displayinlineblock {
+  display: inline-block;
 }
 
 .displaynone {
