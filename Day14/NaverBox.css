@@ -480,9 +480,6 @@
   float: left;
   width: 100px;
   height: 30px;
-  border: 1px solid #DCDCDC;
-  background: #FFFFFF;
-  color: #444444;
   text-align: center;
   text-decoration: none;
   font-size: 12px;
@@ -494,9 +491,6 @@
   margin-left: 5px;
   width: 70px;
   height: 30px;
-  border: 1px solid #DCDCDC;
-  background: #FFFFFF;
-  color: #444444;
   text-align: center;
   text-decoration: none;
   font-size: 12px;
@@ -512,13 +506,46 @@
   margin-left: 5px;
   width: 50px;
   height: 30px;
-  border: 1px solid #DCDCDC;
-  background: #FFFFFF;
-  color: #444444;
   text-align: center;
   text-decoration: none;
+  font-weight: bold;
   font-size: 12px;
   line-height: 29px;
+}
+
+.seemoresidehidden>.seeconfigreset {
+  width: 75px;
+  margin-left: -10px;
+}
+
+.seemoresidehidden>.seeconfigreset:hover {
+  color: #00AB33;
+}
+
+.hoverborder {
+  color: #444444;
+  border: solid 1px #DCDCDC;
+  background: #FFFFFF;
+}
+
+.hoverborder:hover {
+  border-color: #BEC8D8;
+}
+
+.greenlightconfirm {
+  color: #FFFFFF;
+  border: solid 1px #00C73C;
+  background: #00C73C;
+}
+
+.reseticon {
+  display: inline-block;
+  margin-right: 5px;
+  width: 15px;
+  height: 15px;
+  background-position: -132px -291px;
+  vertical-align: -3px;
+  background-image: url('https://s.pstatic.net/static/www/img/2018/sp_themecast_v180607.png');
 }
 
 .seemoresideclose {
@@ -750,6 +777,31 @@
   left: 0px;
   background: #FFFFFF;
   z-index: 12;
+  padding: 20px 10px 15px 10px;
+}
+
+.seemoremenusub {
+  float: left;
+  width: 154px;
+  height: 292px;
+  border-left: solid 1px #DCDCDC;
+  border-right: solid 1px #DCDCDC;
+  padding-left: 16px;
+}
+
+.seemoremenusub>h3 {
+  padding-top: 6px;
+  vertical-align: top;
+  line-height: 16px;
+}
+
+.addmenu {
+  padding-top: 4px;
+  list-style: none;
+}
+
+.addmenu>li {
+  padding-top: 10px;
 }
 
 .seeconfig {
@@ -773,6 +825,14 @@
 
 .seeradio {
   display: none;
+  border: solid 1px #DCDCDC;
+  margin-right: 8px;
+  width: 15px;
+  height: 15px;
+  background-position: -28px -62px;
+  vertical-align: -3px;
+  background-image: url('https://s.pstatic.net/static/www/img/2018/sp_more_v180627.png');
+  cursor: pointer;
 }
 
 #innerbody>div {
