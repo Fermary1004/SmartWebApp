@@ -144,10 +144,6 @@ $(document).ready(function() {
   var selectedSetArray = [];
   var inputArray = [];
 
-  $('#menublack>.list>a').each(function() {
-    baseSetArray.push($(this).prop('class'));
-  });
-
   $('.seeradio').click(function() {
     if ($(this).prop('class').indexOf('displayinlineblock') < 0) {
       $(this).prop('checked', '');
