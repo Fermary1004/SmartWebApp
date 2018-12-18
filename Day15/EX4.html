@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+  <title>YEX4</title>
+  <style>
+		*{
+			box-sizing: border-box;
+		}
+    .modal-background {
+      position: absolute;
+      background-color: #000000;
+      opacity: 0.7;
+      top: 0px;
+			left: 0px;
+			right: 0px;
+			min-height: 100vh;
+			/* vh = view height % = 즉 화면상 보이는 높이의 100%, width의 경우 vw이다 */
+			z-index: 1;
+			display: none;
+    }
+    
+    .modal {
+			position: absolute;
+			background-color: #FFFFFF;
+			top : calc(50% - 150px);
+			left: calc(50% - 250px);
+			width: 412px;
+			height: 240px;
+			z-index: 3;
+			display: none;
+		}
+		
+		.modal-close {
+			font-size: 40px;
+			color: #444444;
+			line-height: 58px;
+			float: right;
+			margin-right: 10px;
+		}
+    
+    .modal-header {
+			height: 60px;
+			border-bottom: solid 1px #444444;
+		}
+
+		.modal-main {
+			height: 120px;
+		}
+
+		.modal-footer {
+			height: 60px;
+			border-top: solid 1px #444444;
+		}
+
+		.input{
+			margin: 10px;
+			width: 300px;
+			height: 30px;
+		}
+		
+		.inputset {
+			margin: 10px 0px;
+			float: left;
+		}
+
+		.sidebutton {
+			float: left;
+			margin: 10px 0px;
+		}
+
+		.confirm {
+			width: 80px;
+			height: 80px;
+			margin: 10px 0px;
+		}
+  </style>
+</head>
+
+<body>
+	<button class="btn-login">로그인</button>
+	<div class="modal-background"></div>
+	<div class="modal">
+		<div class="modal-header">
+			<i class="fas fa-times modal-close btn-close"></i>
+		</div>
+		<div class="modal-main">
+			<form action="" method="POST">
+				<div class="inputset">
+					<div><input type="text" name="id" id="id" class="input"></div>
+					<div><input type="password" name="pw" id="pw" class="input"></div>
+				</div>
+				<div class="sidebutton"><button type="submit" class="confirm">로그인</button></div>
+			</form>
+		</div>
+		<div class="modal-footer"><button class="btn-close">닫기</button></div>
+	</div>
+</body>
+<script>
+  $(document).ready(function() {
+    $('.btn-login').click(function() {
+      $('.modal').css('display', 'block');
+      $('.modal-background').css('display', 'block');
+    });
+    $('.btn-close').click(function() {	
+      $('.modal').css('display', 'none');
+      $('.modal-background').css('display', 'none');
+    })
+  });
+</script>
+
+</html>

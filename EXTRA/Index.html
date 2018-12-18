@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      margin: 0px;
+      padding: 0px;
+    }
+    
+    .box {
+      border: solid 1px #FF0000;
+      width: 350px;
+      height: 200px;
+      float: left;
+    }
+    
+    .img2 {
+      width: auto;
+      height: 100%;
+    }
+    
+    @media(max-width: 700px) {
+      .box {
+        width: 100%;
+        border-color: #0000FF;
+      }
+      .img2 {
+        width: 300px;
+        height: 168px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <img src="takealook.jpg" alt="take a look" width="100%" height="auto">
+  </div>
+  <div class="box">
+    <img class="img2" src="takealook.jpg" alt="take a look?">
+  </div>
+</body>
+
+</html>

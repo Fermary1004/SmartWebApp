@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <title>YEX2</title>
+  <style>
+    .basebox {
+      width: 100px;
+      height: 100px;
+			border: solid 1px #000000;
+			font-size: 30px;
+			text-align: center;
+			color: #FFFFFF;
+      position: relative;
+		}
+		
+		/* .basebox:hover {
+			background-color: #FF0000;
+			font-size: 30px;
+		} */
+		/* 이렇게 해두고 기본 박스의 폰트를 0으로 하는 방법도 있다 */
+    
+    .redstar {
+      background-color: #FF0000;
+      border-color: #FF0000;
+    }
+    
+    .hideon {
+      color: #FFFFFF;
+      font-size: 30px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="basebox">
+		<!-- hover -->
+    <div class="hideon">hover</div>
+  </div>
+</body>
+<script>
+  $(document).ready(function() {
+    $('.hideon').hide();
+
+    $('.basebox').hover(function() {
+      $(this).toggleClass('redstar');
+      $('.hideon').toggle();
+		})
+
+		// $('.basebox').hover(function(){
+		// 	$(this).addClass('redstar');
+		// 	$(this).text('hover!');
+		// }, function(){
+		// 	$(this).removeClass('redstar');
+		// 	$(this).text('');
+		// });
+
+		// hover에는 함수를 두개 넣을 수 있다
+		// 위와 같은 경우
+		// $('.basebox').hover(function(){ 함수1 }, function(){ 함수 2})로 넣으면 들어올때 함수 1이, 나갈때 함수 2가 실행된다
+		// 두개로 만들지 않을 경우 함수가 들어올때 한번, 나갈때 한번 총 두 번 실행된다
+  });
+</script>
+
+</html>

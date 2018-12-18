@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <title>YEX5</title>
+  <style>
+    .checkBox {
+      width: 100px;
+      height: 100px;
+      border: solid 1px black;
+      display: inline-block;
+      font-size: 92px;
+      overflow: hidden;
+      color: white;
+      text-align: end;
+    }
+    
+    .checked {
+      background-color: goldenrod;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="checkBox">1</div>
+  <div class="checkBox">2</div>
+  <div class="checkBox">3</div>
+  <div class="checkBox">4</div>
+  <div class="checkBox">5</div>
+  <div class="checkBox">6</div>
+</body>
+<script>
+  $(document).ready(function() {
+    var maximumBox = 3;
+
+    $('.checkBox').click(function() {
+      $(this).toggleClass('checked');
+
+      if (maxCheck('.checked', maximumBox) == true) {
+        // 따로 만들어둔 함수로 최대치가 넘었는지 확인한다
+        // 넘어서 ture가 반환되었다면, 토글되어 켜진 방금전 박스를 꺼주고 경고창을 출력한다
+        $(this).removeClass('checked');
+        alert(maximumBox + "개보다 많이 선택할 수 없어요!");
+      }
+    });
+
+    function maxCheck(target, maxCount) {
+      // target에 id, class등의 프로퍼티를 받아서, 해당 프로퍼티가 전체에서 몇개나 있는지 확인하여
+      // maxCount보다 많은지 판정하여 넘어갔을 경우 true를, 아직 안 넘어갔을 경우 false를 뱉어내는 함수
+      var checkedCount = $(target).length;
+      var result = checkedCount > maxCount ? true : false;
+      // 3항 연산자로 조건을 비교하여 참이면 true를 거짓이면 false를 result에 저장하게 만든다
+      // 3항 연산자는 조건식 ? 참 결과 : 거짓 결과로 사용한다
+      return result;
+    }
+  });
+</script>
+
+</html>

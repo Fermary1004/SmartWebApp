@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="//code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
+  <title>YEX1</title>
+  <style>
+    table {
+      border: solid 1px #000000;
+    }
+    
+    td {
+      border: solid 1px #000000;
+      width: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <div>
+    <table>
+      <tr>
+        <td><input type="checkbox" name="cball" class="cball">선택</td>
+        <td>내용</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="cbboard1" id="cbboard1" class="cbboard"></td>
+        <td>게시판1</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="cbboard2" id="cbboard2" class="cbboard"></td>
+        <td>게시판2</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="cbboard3" id="cbboard3" class="cbboard"></td>
+        <td>게시판3</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" name="cbboard4" id="cbboard4" class="cbboard"></td>
+        <td>게시판4</td>
+      </tr>
+    </table>
+  </div>
+</body>
+<script>
+  $(document).ready(function() {
+    $('.cball').click(function() {
+      if (cbcheck() == true) {
+        $('.cball').prop('checked', 'checked');
+        $('.cbboard').each(function() {
+          $(this).prop('checked', 'checked');
+        })
+      } else {
+        $('.cball').prop('checked', '');
+        $('.cbboard').each(function() {
+          $(this).prop('checked', '');
+        })
+      }
+    });
+
+    function cbcheck() {
+      var result;
+      if ($('.cbboard').prop('checked') == '') {
+				result = true;
+      } else {
+        $('.cbboard').each(function() {
+          if ($(this).prop('checked') == '') {
+						result = true;
+					} else result = false;
+        });
+      }
+      return result;
+    }
+  });
+</script>
+
+</html>
