@@ -324,83 +324,83 @@
   padding-left: 0px;
 }
 
-.mail {
+.invmail {
   width: 25px;
   background-position: -244px -233px;
 }
 
-.cafe {
+.invcafe {
   width: 27px;
   background-position: -279px -130px;
 }
 
-.blog {
+.invblog {
   width: 40px;
   background-position: -150px -182px;
 }
 
-.kin {
+.invkin {
   width: 40px;
   background-position: -102px -156px;
 }
 
-.shopping {
+.invshopping {
   width: 26px;
   background-position: -128px -104px;
 }
 
-.pay {
+.invpay {
   width: 25px;
   background-position: -107px -285px;
 }
 
-.tv {
+.invtv {
   margin-top: -1px;
   width: 32px;
   background-position: -125px -130px;
 }
 
-.dic {
+.invdic {
   width: 26px;
   background-position: 0 -259px;
 }
 
-.news {
+.invnews {
   width: 28px;
   background-position: -279px -26px;
 }
 
-.stock {
+.invstock {
   width: 26px;
   background-position: -108px -259px;
 }
 
-.land {
+.invland {
   width: 40px;
   background-position: -152px -156px;
 }
 
-.map {
+.invmap {
   width: 27px;
   background-position: -279px -208px;
 }
 
-.movie {
+.invmovie {
   width: 27px;
   background-position: -279px -52px;
 }
 
-.music {
+.invmusic {
   width: 26px;
   background-position: -144px -259px;
 }
 
-.book {
+.invbook {
   width: 13px;
   background-position: -140px -78px;
 }
 
-.webtoon {
+.invwebtoon {
   width: 27px;
   background-position: -279px -78px;
 }
@@ -408,11 +408,6 @@
 .invalram {
   width: 26px;
   background-position: -252px -259px;
-}
-
-.invmovie {
-  width: 27px;
-  background-position: -279px -52px;
 }
 
 .invaudioclip {
@@ -438,6 +433,11 @@
 .invadress {
   width: 40px;
   background-position: -229px -26px;
+}
+
+.invinfodic {
+  width: 53px;
+  background-position: -65px -104px;
 }
 
 .menubar {

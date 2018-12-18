@@ -140,7 +140,7 @@ $(document).ready(function() {
   })
 
   var maxArray = 5;
-  var baseSetArray = [];
+  var baseSetArray = ["invdic", "invnews", "invstock", "invland", "invmap", "invmovie", "invmusic", "invbook", "invwebtoon"];
   var selectedSetArray = [];
   var inputArray = [];
 
@@ -149,6 +149,10 @@ $(document).ready(function() {
   });
 
   $('.seeradio').click(function() {
+    if ($(this).prop('class').indexOf('displayinlineblock') < 0) {
+      $(this).prop('checked', '');
+      return;
+    }
     var index = inputArray.indexOf($(this).val());
 
     if (index < 0) {
